@@ -1,0 +1,1199 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/GConsent", "https://schema.org", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/OntoCookie" ],
+    "iri" : "http://www.semanticweb.org/OntoCookie",
+    "version" : "Version 1.2",
+    "description" : {
+      "undefined" : "The OntoCookie ontology for semantically representing web cookies and cookie-based data sharing online."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Anurag Vats",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Petraq Nako",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Anna Fensel",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Anelia Kurteva",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Geni Bushati",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Sven Carsten Rasmusen",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "Version 1.2",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The OntoCookie ontology is a formal representation of the cookie domain. The ontology was built as a response to the lack of openly available semantic models for cookies. By following a top-down ontology engineering approach, the main classes describing cookies, their purpose, necessity, data subject giving consent for cookies, sub-classes and the relationships between them were defined.",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/GConsent#Status",
+    "baseIri" : "https://w3id.org/GConsent",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Represents the status of consent for the data subject. This allows persisting the determination of the validatity or suitability of consent (as an entity or instance) for use in processing and other activities. Examples: consent is given, consent is requested but not given, consent was withdrawn."
+    },
+    "label" : {
+      "IRI-based" : "Status",
+      "undefined" : "Status"
+    },
+    "subClasses" : [ "4", "5", "6" ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Tracking",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Tracking cookies are commonly used for legitimate marketing and advertising purposes including track the user's behavior."
+    },
+    "label" : {
+      "IRI-based" : "Tracking",
+      "undefined" : "Tracking"
+    },
+    "id" : "7",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Marketing",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Tracking track users' online activity to help advertisers deliver more relevant advertising or to limit how many times users see an ad."
+    },
+    "label" : {
+      "IRI-based" : "Marketing",
+      "undefined" : "Marketing"
+    },
+    "id" : "8",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#ServiceOptimisation",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Aims to improve a service process that involves close interaction between customer and a web service."
+    },
+    "label" : {
+      "IRI-based" : "ServiceOptimisation",
+      "undefined" : "Service Optimisation"
+    },
+    "id" : "16",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Cookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "HTTP cookies (also called web cookies, Internet cookies, browser cookies, or simply cookies) are small blocks of data created by a web server while a user is browsing a website and placed on the user's computer or other device by the user’s web browser. Cookies are placed on the device used to access a website, and more than one cookie may be placed on a user’s device during a session."
+    },
+    "label" : {
+      "IRI-based" : "Cookie",
+      "undefined" : "Cookie"
+    },
+    "subClasses" : [ "36", "37", "38", "39", "40", "41", "28", "26", "35", "30" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#ZombieCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A zombie cookie is data and code that has been placed by a web server on a visitor's computer or other device in a hidden location outside the visitor's web browser's dedicated cookie storage location, and that automatically recreates a HTTP cookie as a regular cookie after the original cookie had been deleted."
+    },
+    "label" : {
+      "IRI-based" : "ZombieCookie",
+      "undefined" : "Zombie Cookie"
+    },
+    "id" : "37",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Optional",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An optional cookie is a type of cookie that is used by the website to request optional or additional information from a website user."
+    },
+    "label" : {
+      "IRI-based" : "Optional",
+      "undefined" : "Optional"
+    },
+    "id" : "42",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#SessionCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A session cookie (also known as an in-memory cookie, transient cookie or non-persistent cookie) exists only in temporary memory while the user navigates a website. Session cookies expire or are deleted when the user closes the web browser. Session cookies are identified by the browser by the absence of an expiration date assigned to them."
+    },
+    "label" : {
+      "IRI-based" : "SessionCookie",
+      "undefined" : "Session Cookie"
+    },
+    "id" : "41",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Purpose",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The purpose of the cookie."
+    },
+    "label" : {
+      "IRI-based" : "Purpose",
+      "undefined" : "Purpose"
+    },
+    "subClasses" : [ "21", "19", "24", "7", "8", "16", "1" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Necessity",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Signifies if a cookie is necessary or optional."
+    },
+    "label" : {
+      "IRI-based" : "Necessity",
+      "undefined" : "Necessity"
+    },
+    "subClasses" : [ "42", "45" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#AuthenticationCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Authentication cookies are commonly used by web servers to authenticate that a user is logged in, and with which account they are logged in."
+    },
+    "label" : {
+      "IRI-based" : "AuthenticationCookie",
+      "undefined" : "Authentication Cookie"
+    },
+    "id" : "36",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#SecureCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A secure cookie can only be transmitted over an encrypted connection (i.e. HTTPS). They cannot be transmitted over unencrypted connections (i.e. HTTP). This makes the cookie less likely to be exposed to cookie theft via eavesdropping. A cookie is made secure by adding the Secure flag to the cookie."
+    },
+    "label" : {
+      "IRI-based" : "SecureCookie",
+      "undefined" : "Secure Cookie"
+    },
+    "id" : "28",
+    "superClasses" : [ "10" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "10", "59" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#ThirdPartyCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A third-party cookie, however, belongs to a domain different from the one shown in the address bar."
+    },
+    "label" : {
+      "IRI-based" : "ThirdPartyCookie",
+      "undefined" : "Third Party Cookie"
+    },
+    "id" : "60",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#ServicePersonalisation",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Personalised service is a type of customer service tailored to the customer's individual needs."
+    },
+    "label" : {
+      "IRI-based" : "ServicePersonalisation",
+      "undefined" : "Service Personalisation"
+    },
+    "id" : "21",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Profiling",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Cookie profiling, also called web profiling, is the use of persistent or permanent cookies to track a user's overall activity online."
+    },
+    "label" : {
+      "IRI-based" : "Profiling",
+      "undefined" : "Profiling"
+    },
+    "id" : "24",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#SuperCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A supercookie is a cookie with an origin of a top-level domain (such as .com) or a public suffix (such as .co.uk). Ordinary cookies, by contrast, have an origin of a specific domain name, such as example.com."
+    },
+    "label" : {
+      "IRI-based" : "SuperCookie",
+      "undefined" : "Super Cookie"
+    },
+    "id" : "40",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven",
+    "baseIri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Indicates consent is explicitly given."
+    },
+    "label" : {
+      "IRI-based" : "ConsentStatusExplicitlyGiven",
+      "undefined" : "Explicitly Given"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired",
+    "baseIri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Indicates the consent has expired."
+    },
+    "label" : {
+      "IRI-based" : "ConsentStatusExpired",
+      "undefined" : "Expired"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#TrackingCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Tracking cookies, and especially third-party tracking cookies, are commonly used as ways to compile long-term records of individuals' browsing histories."
+    },
+    "label" : {
+      "IRI-based" : "TrackingCookie",
+      "undefined" : "Tracking Cookie"
+    },
+    "subClasses" : [ "60", "70" ],
+    "id" : "39",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/GConsent#DataSubject",
+    "baseIri" : "https://w3id.org/GConsent",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Data Subject is defined as an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person; - according to Article 4(1) of the GDPR pertaining to the definition of Personal Data.\n\nIn the case of this ontology, a Data Subject refers to the person(s) as per the definition of the GDPR. Since a Data Subject is a Person, it is defined as a subclass of foaf:Person.\n\nThe Data Subject is linked to the Consent instance via the isConsentForDataSubject and hasConsent properties."
+    },
+    "label" : {
+      "IRI-based" : "DataSubject",
+      "undefined" : "Data Subject"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Domain",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The 'domain' attribute signifies the domain for which the cookie is valid and can be submitted with every request for this domain or its subdomains. If this attribute is not specified, then the hostname of the originating server is used as the default value."
+    },
+    "label" : {
+      "IRI-based" : "Domain",
+      "undefined" : "Domain"
+    },
+    "id" : "72"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#SameSiteCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "With attribute SameSite=Strict, the browsers would only send cookies to a target domain that is the same as the origin domain."
+    },
+    "label" : {
+      "IRI-based" : "SameSiteCookie",
+      "undefined" : "Same Site Cookie"
+    },
+    "id" : "35",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#HostOnlyCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Host Only cookie means that the cookie should be handled by the browser to the server only to the same host/server that firstly sent it to the browser."
+    },
+    "label" : {
+      "IRI-based" : "HostOnlyCookie",
+      "undefined" : "Host Only Cookie"
+    },
+    "id" : "30",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#FirstPartyCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A first-party cookie - when a cookie's domain attribute will match the domain that is shown in the web browser's address bar."
+    },
+    "label" : {
+      "IRI-based" : "FirstPartyCookie",
+      "undefined" : "First Party Cookie"
+    },
+    "id" : "70",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#ServiceProvision",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The provision of service is the act of giving it or making it available to users."
+    },
+    "label" : {
+      "IRI-based" : "ServiceProvision",
+      "undefined" : "Service Provision"
+    },
+    "id" : "19",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Path",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The 'path' attribute signifies the URL or path for which the cookie is valid. The default path attribute is set as '/'."
+    },
+    "label" : {
+      "IRI-based" : "Path",
+      "undefined" : "Path"
+    },
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#PersistentCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A persistent cookie expires at a specific date or after a specific length of time. For the persistent cookie's lifespan set by its creator, its information will be transmitted to the server every time the user visits the website that it belongs to, or every time the user views a resource belonging to that website from another website (such as an advertisement)."
+    },
+    "label" : {
+      "IRI-based" : "PersistentCookie",
+      "undefined" : "Persistent Cookie"
+    },
+    "id" : "38",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#HttpOnlyCookie",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An http-only cookie cannot be accessed by client-side APIs, such as JavaScript. This restriction eliminates the threat of cookie theft via cross-site scripting (XSS). However, the cookie remains vulnerable to cross-site tracing (XST) and cross-site request forgery (CSRF) attacks. A cookie is given this characteristic by adding the HttpOnly flag to the cookie."
+    },
+    "label" : {
+      "IRI-based" : "HttpOnlyCookie",
+      "undefined" : "Http Only Cookie"
+    },
+    "id" : "26",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Necessary",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A strictly necessary cookie is a type of cookie that is used by the website to function properly, without which the site would not work."
+    },
+    "label" : {
+      "IRI-based" : "Necessary",
+      "undefined" : "Necessary"
+    },
+    "id" : "45",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#Analytics",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Analytics cookies or performance cookies are used to track website visitors and their user behaviour. This data is then used to improve the way the website works and in turn, used to improve user experience."
+    },
+    "label" : {
+      "IRI-based" : "Analytics",
+      "undefined" : "Analytics"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven",
+    "baseIri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Indicates that consent has not been given."
+    },
+    "label" : {
+      "IRI-based" : "ConsentStatusNotGiven",
+      "undefined" : "Not Given"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/GConsent#Consent",
+    "baseIri" : "https://w3id.org/GConsent",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "As per Article 4(11) of the GDPR, ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her;\n\nIn the case of this ontology, 'Consent' is a concept as well as a tangible entity (something that has a provenance record). To separate this distinction with relation to the data subject, the Consent class represents the consent of the data subject in its entirely, including any history and annotations for it.\n\nTo link the Consent instance with the DataSubject instance, use the isConsentForDataSubject and hasConsent properties."
+    },
+    "label" : {
+      "IRI-based" : "Consent",
+      "undefined" : "Consent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "51"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#hasNecessity",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasNecessity",
+      "undefined" : "has necessity"
+    },
+    "domain" : "10",
+    "attributes" : [ "object", "functional" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://schema.org/url",
+    "baseIri" : "https://schema.org",
+    "range" : "14",
+    "description" : {
+      "undefined" : "URL of an item."
+    },
+    "label" : {
+      "IRI-based" : "url",
+      "undefined" : "url"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "12"
+  }, {
+    "range" : "2",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "range" : "2",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "range" : "2",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "range" : "2",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "2",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
+  }, {
+    "range" : "10",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "10",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "10",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#name",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "33",
+    "description" : {
+      "undefined" : "The name of the data subject that accepted a cookies."
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "undefined" : "name"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype" ],
+    "id" : "31"
+  }, {
+    "range" : "10",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://schema.org/endDate",
+    "baseIri" : "https://schema.org",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "endDate"
+    },
+    "domain" : "10",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://schema.org/duration",
+    "baseIri" : "https://schema.org",
+    "range" : "47",
+    "description" : {
+      "undefined" : "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format."
+    },
+    "label" : {
+      "IRI-based" : "duration",
+      "undefined" : "duration"
+    },
+    "domain" : "10",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "46"
+  }, {
+    "range" : "10",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "10",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/GConsent#isConsentForDataSubject",
+    "baseIri" : "https://w3id.org/GConsent",
+    "range" : "32",
+    "description" : {
+      "undefined" : "Links a consent instance with the data subject it is associated with."
+    },
+    "label" : {
+      "IRI-based" : "isConsentForDataSubject",
+      "undefined" : "is consent for data subject"
+    },
+    "domain" : "51",
+    "attributes" : [ "object", "external", "functional" ],
+    "id" : "50"
+  }, {
+    "range" : "10",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "10",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "range" : "3",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#hasPurpose",
+    "inverse" : "56",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasPurpose",
+      "undefined" : "has purpose"
+    },
+    "domain" : "10",
+    "attributes" : [ "object", "functional" ],
+    "id" : "55"
+  }, {
+    "range" : "10",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "10",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "3",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "3",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus",
+    "baseIri" : "https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasStatus",
+      "undefined" : "has status"
+    },
+    "domain" : "51",
+    "attributes" : [ "object", "external", "functional" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://schema.org/startDate",
+    "baseIri" : "https://schema.org",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "startDate"
+    },
+    "domain" : "10",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://schema.org/Date",
+    "baseIri" : "https://schema.org",
+    "range" : "63",
+    "description" : {
+      "undefined" : "A date value in ISO 8601 date format."
+    },
+    "label" : {
+      "IRI-based" : "Date",
+      "undefined" : "Date"
+    },
+    "domain" : "10",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#consent_id",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "consent_id",
+      "undefined" : "consent id"
+    },
+    "domain" : "51",
+    "comment" : {
+      "undefined" : "Used to uniquely identify a consent instance."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://schema.org/Time",
+    "baseIri" : "https://schema.org",
+    "range" : "64",
+    "description" : {
+      "undefined" : "A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] ."
+    },
+    "label" : {
+      "IRI-based" : "Time",
+      "undefined" : "Time"
+    },
+    "domain" : "10",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#hasPath",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "hasPath",
+      "undefined" : "has path"
+    },
+    "domain" : "10",
+    "attributes" : [ "object", "functional" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/GConsent#hasConsent",
+    "inverse" : "50",
+    "baseIri" : "https://w3id.org/GConsent",
+    "range" : "51",
+    "description" : {
+      "undefined" : "Links a data subject to their consent."
+    },
+    "label" : {
+      "IRI-based" : "hasConsent",
+      "undefined" : "has consent"
+    },
+    "domain" : "32",
+    "attributes" : [ "object", "external", "functional" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#cookie_id",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "71",
+    "description" : {
+      "undefined" : "Used to uniquely identify a cookie."
+    },
+    "label" : {
+      "IRI-based" : "cookie_id",
+      "undefined" : "cookie id"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://schema.org/value",
+    "baseIri" : "https://schema.org",
+    "range" : "68",
+    "description" : {
+      "undefined" : "The value of the quantitative value or property value node."
+    },
+    "label" : {
+      "IRI-based" : "value",
+      "undefined" : "value"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Reffers to the value of a cookie, which is found as a separate fields within cookie logs. Example value: cPFMEtrg26bSUwe6pGuJYx.ZWRhZDc1YjMtZWJlNC00ZWMxLWE4ODgtZTUxOWZjM2YzZDY0..1grieid4t.1grieid4t.0.0.0"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#associatedWith",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "associatedWith",
+      "undefined" : "associated with"
+    },
+    "domain" : "10",
+    "attributes" : [ "object", "functional" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/GConsent#inMedium",
+    "baseIri" : "https://w3id.org/GConsent",
+    "range" : "10",
+    "description" : {
+      "undefined" : "Specifies the medium through which the consent was given. Examples are web forms, paper documents."
+    },
+    "label" : {
+      "IRI-based" : "inMedium",
+      "undefined" : "in medium"
+    },
+    "domain" : "51",
+    "attributes" : [ "object", "external", "functional" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#isPurposeFor",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "isPurposeFor",
+      "undefined" : "is purpose for"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "functional" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.semanticweb.org/OntoCookie#hasDomain",
+    "baseIri" : "http://www.semanticweb.org/OntoCookie",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasDomain",
+      "undefined" : "has domain"
+    },
+    "domain" : "10",
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "range" : "11",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "11",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "range" : "39",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "39",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "86"
+  } ]
+}

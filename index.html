@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>The OntoCookie ontology for semantically representing web cookies</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/OntoCookie","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/OntoCookie","name":"http://www.semanticweb.org/OntoCookie", "headline":"The OntoCookie ontology for semantically representing web cookies", "datePublished":"Wed Mar 15 15:06:59 CET 2023", "version":"Version 1.2", "license":"https://creativecommons.org/licenses/by/4.0/", "contributor":[{"@type":"Person","name":"Anelia Kurteva"},{"@type":"Person","name":"Anna Fensel"},{"@type":"Person","name":"Anurag Vats"},{"@type":"Person","name":"Geni Bushati"},{"@type":"Person","name":"Petraq Nako"},{"@type":"Person","name":"Sven Carsten Rasmusen"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+
+
+<h1>The OntoCookie ontology for semantically representing web cookies</h1>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/OntoCookie">http://www.semanticweb.org/OntoCookie</a></dd>
+<dt>Revision:</dt>
+<dd>Version 1.2</dd>
+<dt>Contributors:</dt>
+<dd>Anelia Kurteva</dd><dd>Anna Fensel</dd><dd>Anurag Vats</dd><dd>Geni Bushati</dd><dd>Petraq Nako</dd><dd>Sven Carsten Rasmusen</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Kurteva, A., Bushati, G., Rasmusen, S. C., Vats, A., Nako, P., Fensel, A. The OntoCookie Ontology for semantically representing web cookies, Version 1.2, 2023.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+The OntoCookie ontology is a formal representation of the cookie domain in the context of the General Data Protection Regulation (GDPR)[1]. The ontology was built as a response to the lack of openly available semantic models for cookies and the need for cookie consent compliance (from a design and implementation perspectives). OntoCookie was built with Protégé [2]
+and currently comprises of 233 axioms, 32 classes, 11 object properties and 10 data properties.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>ontocookie</b></td><td>&lt;http://www.semanticweb.org/OntoCookie&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://www.schema.org&gt;</td></tr>
+<tr><td><b>wgs</b></td><td>&lt;http://www.w3.org/2003/01/geo/wgs84_pos&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>gn</b></td><td>&lt;http://www.geonames.org/ontology&gt;</td></tr>
+<tr><td><b>fn</b></td><td>&lt;http://www.w3.org/2005/xpath-functions&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>sesame</b></td><td>&lt;http://www.openrdf.org/schema/sesame&gt;</td></tr>
+<tr><td><b>gconsent</b></td><td>&lt;https://w3id.org/GConsent&gt;</td></tr>
+<tr><td><b>ontology</b></td><td>&lt;https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">OntoCookie: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#Analytics" title="http://www.semanticweb.org/OntoCookie#Analytics">Analytics</a>
+   </li>
+   <li>
+      <a href="#AuthenticationCookie"
+         title="http://www.semanticweb.org/OntoCookie#AuthenticationCookie">Authentication Cookie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+   </li>
+   <li>
+      <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/GConsent#DataSubject" title="https://w3id.org/GConsent#DataSubject">Data Subject</a>
+   </li>
+   <li>
+      <a href="#Domain" title="http://www.semanticweb.org/OntoCookie#Domain">Domain</a>
+   </li>
+   <li>
+      <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired"
+         title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired">Expired</a>
+   </li>
+   <li>
+      <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven"
+         title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven">Explicitly Given</a>
+   </li>
+   <li>
+      <a href="#FirstPartyCookie"
+         title="http://www.semanticweb.org/OntoCookie#FirstPartyCookie">First Party Cookie</a>
+   </li>
+   <li>
+      <a href="#HostOnlyCookie"
+         title="http://www.semanticweb.org/OntoCookie#HostOnlyCookie">Host Only Cookie</a>
+   </li>
+   <li>
+      <a href="#HttpOnlyCookie"
+         title="http://www.semanticweb.org/OntoCookie#HttpOnlyCookie">Http Only Cookie</a>
+   </li>
+   <li>
+      <a href="#Marketing" title="http://www.semanticweb.org/OntoCookie#Marketing">Marketing</a>
+   </li>
+   <li>
+      <a href="#Necessary" title="http://www.semanticweb.org/OntoCookie#Necessary">Necessary</a>
+   </li>
+   <li>
+      <a href="#Necessity" title="http://www.semanticweb.org/OntoCookie#Necessity">Necessity</a>
+   </li>
+   <li>
+      <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven"
+         title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven">Not Given</a>
+   </li>
+   <li>
+      <a href="#Optional" title="http://www.semanticweb.org/OntoCookie#Optional">Optional</a>
+   </li>
+   <li>
+      <a href="#Path" title="http://www.semanticweb.org/OntoCookie#Path">Path</a>
+   </li>
+   <li>
+      <a href="#PersistentCookie"
+         title="http://www.semanticweb.org/OntoCookie#PersistentCookie">Persistent Cookie</a>
+   </li>
+   <li>
+      <a href="#Profiling" title="http://www.semanticweb.org/OntoCookie#Profiling">Profiling</a>
+   </li>
+   <li>
+      <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+   </li>
+   <li>
+      <a href="#SameSiteCookie"
+         title="http://www.semanticweb.org/OntoCookie#SameSiteCookie">Same Site Cookie</a>
+   </li>
+   <li>
+      <a href="#SecureCookie"
+         title="http://www.semanticweb.org/OntoCookie#SecureCookie">Secure Cookie</a>
+   </li>
+   <li>
+      <a href="#ServiceOptimisation"
+         title="http://www.semanticweb.org/OntoCookie#ServiceOptimisation">Service Optimisation</a>
+   </li>
+   <li>
+      <a href="#ServicePersonalisation"
+         title="http://www.semanticweb.org/OntoCookie#ServicePersonalisation">Service Personalisation</a>
+   </li>
+   <li>
+      <a href="#ServiceProvision"
+         title="http://www.semanticweb.org/OntoCookie#ServiceProvision">Service Provision</a>
+   </li>
+   <li>
+      <a href="#SessionCookie"
+         title="http://www.semanticweb.org/OntoCookie#SessionCookie">Session Cookie</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/GConsent#Status" title="https://w3id.org/GConsent#Status">Status</a>
+   </li>
+   <li>
+      <a href="#SuperCookie"
+         title="http://www.semanticweb.org/OntoCookie#SuperCookie">Super Cookie</a>
+   </li>
+   <li>
+      <a href="#ThirdPartyCookie"
+         title="http://www.semanticweb.org/OntoCookie#ThirdPartyCookie">Third Party Cookie</a>
+   </li>
+   <li>
+      <a href="#Tracking" title="http://www.semanticweb.org/OntoCookie#Tracking">Tracking</a>
+   </li>
+   <li>
+      <a href="#TrackingCookie"
+         title="http://www.semanticweb.org/OntoCookie#TrackingCookie">Tracking Cookie</a>
+   </li>
+   <li>
+      <a href="#ZombieCookie"
+         title="http://www.semanticweb.org/OntoCookie#ZombieCookie">Zombie Cookie</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#associatedWith"
+         title="http://www.semanticweb.org/OntoCookie#associatedWith">associated with</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/GConsent#hasConsent" title="https://w3id.org/GConsent#hasConsent">has consent</a>
+   </li>
+   <li>
+      <a href="#hasDomain" title="http://www.semanticweb.org/OntoCookie#hasDomain">has domain</a>
+   </li>
+   <li>
+      <a href="#hasNecessity"
+         title="http://www.semanticweb.org/OntoCookie#hasNecessity">has necessity</a>
+   </li>
+   <li>
+      <a href="#hasPath" title="http://www.semanticweb.org/OntoCookie#hasPath">has path</a>
+   </li>
+   <li>
+      <a href="#hasPurpose" title="http://www.semanticweb.org/OntoCookie#hasPurpose">has purpose</a>
+   </li>
+   <li>
+      <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus"
+         title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus">has status</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/GConsent#inMedium" title="https://w3id.org/GConsent#inMedium">in medium</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/GConsent#isConsentForDataSubject"
+         title="https://w3id.org/GConsent#isConsentForDataSubject">is consent for data subject</a>
+   </li>
+   <li>
+      <a href="#isPurposeFor"
+         title="http://www.semanticweb.org/OntoCookie#isPurposeFor">is purpose for</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#consent_id" title="http://www.semanticweb.org/OntoCookie#consent_id">consent id</a>
+   </li>
+   <li>
+      <a href="#cookie_id" title="http://www.semanticweb.org/OntoCookie#cookie_id">cookie id</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/Date" title="https://schema.org/Date">Date</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/duration" title="https://schema.org/duration">duration</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/endDate" title="https://schema.org/endDate">
+         <span>end date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#name" title="http://www.semanticweb.org/OntoCookie#name">name</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/startDate" title="https://schema.org/startDate">
+         <span>start date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://schema.org/Time" title="https://schema.org/Time">Time</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/url" title="https://schema.org/url">url</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/value" title="https://schema.org/value">value</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for OntoCookie classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by OntoCookie.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Analytics" title="http://www.semanticweb.org/OntoCookie#Analytics">Analytics</a>
+      </li>
+      <li>
+         <a href="#AuthenticationCookie"
+            title="http://www.semanticweb.org/OntoCookie#AuthenticationCookie">Authentication Cookie</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+      </li>
+      <li>
+         <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/GConsent#DataSubject" title="https://w3id.org/GConsent#DataSubject">Data Subject</a>
+      </li>
+      <li>
+         <a href="#Domain" title="http://www.semanticweb.org/OntoCookie#Domain">Domain</a>
+      </li>
+      <li>
+         <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired"
+            title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired">Expired</a>
+      </li>
+      <li>
+         <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven"
+            title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven">Explicitly Given</a>
+      </li>
+      <li>
+         <a href="#FirstPartyCookie"
+            title="http://www.semanticweb.org/OntoCookie#FirstPartyCookie">First Party Cookie</a>
+      </li>
+      <li>
+         <a href="#HostOnlyCookie"
+            title="http://www.semanticweb.org/OntoCookie#HostOnlyCookie">Host Only Cookie</a>
+      </li>
+      <li>
+         <a href="#HttpOnlyCookie"
+            title="http://www.semanticweb.org/OntoCookie#HttpOnlyCookie">Http Only Cookie</a>
+      </li>
+      <li>
+         <a href="#Marketing" title="http://www.semanticweb.org/OntoCookie#Marketing">Marketing</a>
+      </li>
+      <li>
+         <a href="#Necessary" title="http://www.semanticweb.org/OntoCookie#Necessary">Necessary</a>
+      </li>
+      <li>
+         <a href="#Necessity" title="http://www.semanticweb.org/OntoCookie#Necessity">Necessity</a>
+      </li>
+      <li>
+         <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven"
+            title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven">Not Given</a>
+      </li>
+      <li>
+         <a href="#Optional" title="http://www.semanticweb.org/OntoCookie#Optional">Optional</a>
+      </li>
+      <li>
+         <a href="#Path" title="http://www.semanticweb.org/OntoCookie#Path">Path</a>
+      </li>
+      <li>
+         <a href="#PersistentCookie"
+            title="http://www.semanticweb.org/OntoCookie#PersistentCookie">Persistent Cookie</a>
+      </li>
+      <li>
+         <a href="#Profiling" title="http://www.semanticweb.org/OntoCookie#Profiling">Profiling</a>
+      </li>
+      <li>
+         <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+      </li>
+      <li>
+         <a href="#SameSiteCookie"
+            title="http://www.semanticweb.org/OntoCookie#SameSiteCookie">Same Site Cookie</a>
+      </li>
+      <li>
+         <a href="#SecureCookie"
+            title="http://www.semanticweb.org/OntoCookie#SecureCookie">Secure Cookie</a>
+      </li>
+      <li>
+         <a href="#ServiceOptimisation"
+            title="http://www.semanticweb.org/OntoCookie#ServiceOptimisation">Service Optimisation</a>
+      </li>
+      <li>
+         <a href="#ServicePersonalisation"
+            title="http://www.semanticweb.org/OntoCookie#ServicePersonalisation">Service Personalisation</a>
+      </li>
+      <li>
+         <a href="#ServiceProvision"
+            title="http://www.semanticweb.org/OntoCookie#ServiceProvision">Service Provision</a>
+      </li>
+      <li>
+         <a href="#SessionCookie"
+            title="http://www.semanticweb.org/OntoCookie#SessionCookie">Session Cookie</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/GConsent#Status" title="https://w3id.org/GConsent#Status">Status</a>
+      </li>
+      <li>
+         <a href="#SuperCookie"
+            title="http://www.semanticweb.org/OntoCookie#SuperCookie">Super Cookie</a>
+      </li>
+      <li>
+         <a href="#ThirdPartyCookie"
+            title="http://www.semanticweb.org/OntoCookie#ThirdPartyCookie">Third Party Cookie</a>
+      </li>
+      <li>
+         <a href="#Tracking" title="http://www.semanticweb.org/OntoCookie#Tracking">Tracking</a>
+      </li>
+      <li>
+         <a href="#TrackingCookie"
+            title="http://www.semanticweb.org/OntoCookie#TrackingCookie">Tracking Cookie</a>
+      </li>
+      <li>
+         <a href="#ZombieCookie"
+            title="http://www.semanticweb.org/OntoCookie#ZombieCookie">Zombie Cookie</a>
+      </li>
+   </ul>
+   <div class="entity" id="Analytics">
+      <h3>Analytics<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Analytics</p>
+      <div class="info">
+         <span class="markdown">Analytics cookies or performance cookies are used to track website visitors and their user behaviour. This data is then used to improve the way the website works and in turn, used to improve user experience.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AuthenticationCookie">
+      <h3>Authentication Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#AuthenticationCookie</p>
+      <div class="info">
+         <span class="markdown">Authentication cookies are commonly used by web servers to authenticate that a user is logged in, and with which account they are logged in.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/GConsent#Consent">
+      <h3>Consent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/GConsent#Consent</p>
+      <div class="info">
+         <span class="markdown">As per Article 4(11) of the GDPR, ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her;
+
+In the case of this ontology, 'Consent' is a concept as well as a tangible entity (something that has a provenance record). To separate this distinction with relation to the data subject, the Consent class represents the consent of the data subject in its entirely, including any history and annotations for it.
+
+To link the Consent instance with the DataSubject instance, use the isConsentForDataSubject and hasConsent properties.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#consent_id" title="http://www.semanticweb.org/OntoCookie#consent_id">consent id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus"
+               title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus">has status</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/GConsent#inMedium" title="https://w3id.org/GConsent#inMedium">in medium</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/GConsent#isConsentForDataSubject"
+               title="https://w3id.org/GConsent#isConsentForDataSubject">is consent for data subject</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#associatedWith"
+               title="http://www.semanticweb.org/OntoCookie#associatedWith">associated with</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/GConsent#hasConsent" title="https://w3id.org/GConsent#hasConsent">has consent</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Cookie">
+      <h3>Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Cookie</p>
+      <div class="info">
+         <span class="markdown">HTTP cookies (also called web cookies, Internet cookies, browser cookies, or simply cookies) are small blocks of data created by a web server while a user is browsing a website and placed on the user's computer or other device by the user’s web browser. Cookies are placed on the device used to access a website, and more than one cookie may be placed on a user’s device during a session.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AuthenticationCookie"
+               title="http://www.semanticweb.org/OntoCookie#AuthenticationCookie">Authentication Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HostOnlyCookie"
+               title="http://www.semanticweb.org/OntoCookie#HostOnlyCookie">Host Only Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HttpOnlyCookie"
+               title="http://www.semanticweb.org/OntoCookie#HttpOnlyCookie">Http Only Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PersistentCookie"
+               title="http://www.semanticweb.org/OntoCookie#PersistentCookie">Persistent Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SameSiteCookie"
+               title="http://www.semanticweb.org/OntoCookie#SameSiteCookie">Same Site Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SecureCookie"
+               title="http://www.semanticweb.org/OntoCookie#SecureCookie">Secure Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SessionCookie"
+               title="http://www.semanticweb.org/OntoCookie#SessionCookie">Session Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SuperCookie"
+               title="http://www.semanticweb.org/OntoCookie#SuperCookie">Super Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TrackingCookie"
+               title="http://www.semanticweb.org/OntoCookie#TrackingCookie">Tracking Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ZombieCookie"
+               title="http://www.semanticweb.org/OntoCookie#ZombieCookie">Zombie Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://schema.org/Date" title="https://schema.org/Date">Date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/Time" title="https://schema.org/Time">Time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#associatedWith"
+               title="http://www.semanticweb.org/OntoCookie#associatedWith">associated with</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#cookie_id" title="http://www.semanticweb.org/OntoCookie#cookie_id">cookie id</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/duration" title="https://schema.org/duration">duration</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/endDate" title="https://schema.org/endDate">end date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDomain" title="http://www.semanticweb.org/OntoCookie#hasDomain">has domain</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasNecessity"
+               title="http://www.semanticweb.org/OntoCookie#hasNecessity">has necessity</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPath" title="http://www.semanticweb.org/OntoCookie#hasPath">has path</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPurpose" title="http://www.semanticweb.org/OntoCookie#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/startDate" title="https://schema.org/startDate">start date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/url" title="https://schema.org/url">url</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://schema.org/value" title="https://schema.org/value">value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/GConsent#inMedium" title="https://w3id.org/GConsent#inMedium">in medium</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPurposeFor"
+               title="http://www.semanticweb.org/OntoCookie#isPurposeFor">is purpose for</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/GConsent#DataSubject">
+      <h3>Data Subject<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/GConsent#DataSubject</p>
+      <div class="info">
+         <span class="markdown">Data Subject is defined as an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person; - according to Article 4(1) of the GDPR pertaining to the definition of Personal Data.
+
+In the case of this ontology, a Data Subject refers to the person(s) as per the definition of the GDPR. Since a Data Subject is a Person, it is defined as a subclass of foaf:Person.
+
+The Data Subject is linked to the Consent instance via the isConsentForDataSubject and hasConsent properties.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/GConsent#hasConsent" title="https://w3id.org/GConsent#hasConsent">has consent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#name" title="http://www.semanticweb.org/OntoCookie#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/GConsent#isConsentForDataSubject"
+               title="https://w3id.org/GConsent#isConsentForDataSubject">is consent for data subject</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Domain">
+      <h3>Domain<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Domain</p>
+      <div class="info">
+         <span class="markdown">The 'domain' attribute signifies the domain for which the cookie is valid and can be submitted with every request for this domain or its subdomains. If this attribute is not specified, then the hostname of the originating server is used as the default value.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasDomain" title="http://www.semanticweb.org/OntoCookie#hasDomain">has domain</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired">
+      <h3>Expired<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired</p>
+      <div class="info">
+         <span class="markdown">Indicates the consent has expired.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/GConsent#Status" title="https://w3id.org/GConsent#Status">Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven">
+      <h3>Explicitly Given<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven</p>
+      <div class="info">
+         <span class="markdown">Indicates consent is explicitly given.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/GConsent#Status" title="https://w3id.org/GConsent#Status">Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FirstPartyCookie">
+      <h3>First Party Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#FirstPartyCookie</p>
+      <div class="info">
+         <span class="markdown">A first-party cookie - when a cookie's domain attribute will match the domain that is shown in the web browser's address bar.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TrackingCookie"
+               title="http://www.semanticweb.org/OntoCookie#TrackingCookie">Tracking Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HostOnlyCookie">
+      <h3>Host Only Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#HostOnlyCookie</p>
+      <div class="info">
+         <span class="markdown">Host Only cookie means that the cookie should be handled by the browser to the server only to the same host/server that firstly sent it to the browser.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HttpOnlyCookie">
+      <h3>Http Only Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#HttpOnlyCookie</p>
+      <div class="info">
+         <span class="markdown">An http-only cookie cannot be accessed by client-side APIs, such as JavaScript. This restriction eliminates the threat of cookie theft via cross-site scripting (XSS). However, the cookie remains vulnerable to cross-site tracing (XST) and cross-site request forgery (CSRF) attacks. A cookie is given this characteristic by adding the HttpOnly flag to the cookie.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Marketing">
+      <h3>Marketing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Marketing</p>
+      <div class="info">
+         <span class="markdown">Tracking track users' online activity to help advertisers deliver more relevant advertising or to limit how many times users see an ad.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Necessary">
+      <h3>Necessary<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Necessary</p>
+      <div class="info">
+         <span class="markdown">A strictly necessary cookie is a type of cookie that is used by the website to function properly, without which the site would not work.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Necessity" title="http://www.semanticweb.org/OntoCookie#Necessity">Necessity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Necessity">
+      <h3>Necessity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Necessity</p>
+      <div class="info">
+         <span class="markdown">Signifies if a cookie is necessary or optional.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Necessary" title="http://www.semanticweb.org/OntoCookie#Necessary">Necessary</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Optional" title="http://www.semanticweb.org/OntoCookie#Optional">Optional</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasNecessity"
+               title="http://www.semanticweb.org/OntoCookie#hasNecessity">has necessity</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven">
+      <h3>Not Given<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven</p>
+      <div class="info">
+         <span class="markdown">Indicates that consent has not been given.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/GConsent#Status" title="https://w3id.org/GConsent#Status">Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Optional">
+      <h3>Optional<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Optional</p>
+      <div class="info">
+         <span class="markdown">An optional cookie is a type of cookie that is used by the website to request optional or additional information from a website user.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Necessity" title="http://www.semanticweb.org/OntoCookie#Necessity">Necessity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Path">
+      <h3>Path<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Path</p>
+      <div class="info">
+         <span class="markdown">The 'path' attribute signifies the URL or path for which the cookie is valid. The default path attribute is set as '/'.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://schema.org/url" title="https://schema.org/url">url</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasPath" title="http://www.semanticweb.org/OntoCookie#hasPath">has path</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PersistentCookie">
+      <h3>Persistent Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#PersistentCookie</p>
+      <div class="info">
+         <span class="markdown">A persistent cookie expires at a specific date or after a specific length of time. For the persistent cookie's lifespan set by its creator, its information will be transmitted to the server every time the user visits the website that it belongs to, or every time the user views a resource belonging to that website from another website (such as an advertisement).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profiling">
+      <h3>Profiling<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Profiling</p>
+      <div class="info">
+         <span class="markdown">Cookie profiling, also called web profiling, is the use of persistent or permanent cookies to track a user's overall activity online.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Purpose">
+      <h3>Purpose<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Purpose</p>
+      <div class="info">
+         <span class="markdown">The purpose of the cookie.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Analytics" title="http://www.semanticweb.org/OntoCookie#Analytics">Analytics</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Marketing" title="http://www.semanticweb.org/OntoCookie#Marketing">Marketing</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Profiling" title="http://www.semanticweb.org/OntoCookie#Profiling">Profiling</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ServiceOptimisation"
+               title="http://www.semanticweb.org/OntoCookie#ServiceOptimisation">Service Optimisation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ServicePersonalisation"
+               title="http://www.semanticweb.org/OntoCookie#ServicePersonalisation">Service Personalisation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ServiceProvision"
+               title="http://www.semanticweb.org/OntoCookie#ServiceProvision">Service Provision</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Tracking" title="http://www.semanticweb.org/OntoCookie#Tracking">Tracking</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isPurposeFor"
+               title="http://www.semanticweb.org/OntoCookie#isPurposeFor">is purpose for</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasPurpose" title="http://www.semanticweb.org/OntoCookie#hasPurpose">has purpose</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SameSiteCookie">
+      <h3>Same Site Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#SameSiteCookie</p>
+      <div class="info">
+         <span class="markdown">With attribute SameSite=Strict, the browsers would only send cookies to a target domain that is the same as the origin domain.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecureCookie">
+      <h3>Secure Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#SecureCookie</p>
+      <div class="info">
+         <span class="markdown">A secure cookie can only be transmitted over an encrypted connection (i.e. HTTPS). They cannot be transmitted over unencrypted connections (i.e. HTTP). This makes the cookie less likely to be exposed to cookie theft via eavesdropping. A cookie is made secure by adding the Secure flag to the cookie.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServiceOptimisation">
+      <h3>Service Optimisation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#ServiceOptimisation</p>
+      <div class="info">
+         <span class="markdown">Aims to improve a service process that involves close interaction between customer and a web service.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServicePersonalisation">
+      <h3>Service Personalisation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#ServicePersonalisation</p>
+      <div class="info">
+         <span class="markdown">Personalised service is a type of customer service tailored to the customer's individual needs.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServiceProvision">
+      <h3>Service Provision<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#ServiceProvision</p>
+      <div class="info">
+         <span class="markdown">The provision of service is the act of giving it or making it available to users.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SessionCookie">
+      <h3>Session Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#SessionCookie</p>
+      <div class="info">
+         <span class="markdown">A session cookie (also known as an in-memory cookie, transient cookie or non-persistent cookie) exists only in temporary memory while the user navigates a website. Session cookies expire or are deleted when the user closes the web browser. Session cookies are identified by the browser by the absence of an expiration date assigned to them.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/GConsent#Status">
+      <h3>Status<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/GConsent#Status</p>
+      <div class="info">
+         <span class="markdown">Represents the status of consent for the data subject. This allows persisting the determination of the validatity or suitability of consent (as an entity or instance) for use in processing and other activities. Examples: consent is given, consent is requested but not given, consent was withdrawn.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired"
+               title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired">Expired</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven"
+               title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven">Explicitly Given</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven"
+               title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven">Not Given</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus"
+               title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus">has status</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SuperCookie">
+      <h3>Super Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#SuperCookie</p>
+      <div class="info">
+         <span class="markdown">A supercookie is a cookie with an origin of a top-level domain (such as .com) or a public suffix (such as .co.uk). Ordinary cookies, by contrast, have an origin of a specific domain name, such as example.com.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ThirdPartyCookie">
+      <h3>Third Party Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#ThirdPartyCookie</p>
+      <div class="info">
+         <span class="markdown">A third-party cookie, however, belongs to a domain different from the one shown in the address bar.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TrackingCookie"
+               title="http://www.semanticweb.org/OntoCookie#TrackingCookie">Tracking Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Tracking">
+      <h3>Tracking<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#Tracking</p>
+      <div class="info">
+         <span class="markdown">Tracking cookies are commonly used for legitimate marketing and advertising purposes including track the user's behavior.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TrackingCookie">
+      <h3>Tracking Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#TrackingCookie</p>
+      <div class="info">
+         <span class="markdown">Tracking cookies, and especially third-party tracking cookies, are commonly used as ways to compile long-term records of individuals' browsing histories.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FirstPartyCookie"
+               title="http://www.semanticweb.org/OntoCookie#FirstPartyCookie">First Party Cookie</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ThirdPartyCookie"
+               title="http://www.semanticweb.org/OntoCookie#ThirdPartyCookie">Third Party Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZombieCookie">
+      <h3>Zombie Cookie<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#ZombieCookie</p>
+      <div class="info">
+         <span class="markdown">A zombie cookie is data and code that has been placed by a web server on a visitor's computer or other device in a hidden location outside the visitor's web browser's dedicated cookie storage location, and that automatically recreates a HTTP cookie as a regular cookie after the original cookie had been deleted.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#associatedWith"
+            title="http://www.semanticweb.org/OntoCookie#associatedWith">associated with</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/GConsent#hasConsent" title="https://w3id.org/GConsent#hasConsent">has consent</a>
+      </li>
+      <li>
+         <a href="#hasDomain" title="http://www.semanticweb.org/OntoCookie#hasDomain">has domain</a>
+      </li>
+      <li>
+         <a href="#hasNecessity"
+            title="http://www.semanticweb.org/OntoCookie#hasNecessity">has necessity</a>
+      </li>
+      <li>
+         <a href="#hasPath" title="http://www.semanticweb.org/OntoCookie#hasPath">has path</a>
+      </li>
+      <li>
+         <a href="#hasPurpose" title="http://www.semanticweb.org/OntoCookie#hasPurpose">has purpose</a>
+      </li>
+      <li>
+         <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus"
+            title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus">has status</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/GConsent#inMedium" title="https://w3id.org/GConsent#inMedium">in medium</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/GConsent#isConsentForDataSubject"
+            title="https://w3id.org/GConsent#isConsentForDataSubject">is consent for data subject</a>
+      </li>
+      <li>
+         <a href="#isPurposeFor"
+            title="http://www.semanticweb.org/OntoCookie#isPurposeFor">is purpose for</a>
+      </li>
+   </ul>
+   <div class="entity" id="associatedWith">
+      <h3>associated with<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#associatedWith</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#associatedWith"
+                  title="http://www.semanticweb.org/OntoCookie#associatedWith">associated with</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">exactly</span> 1 <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/GConsent#hasConsent">
+      <h3>has consent<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/GConsent#hasConsent</p>
+      <div class="info">
+         <span class="markdown">Links a data subject to their consent.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#DataSubject" title="https://w3id.org/GConsent#DataSubject">Data Subject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#isConsentForDataSubject"
+                  title="https://w3id.org/GConsent#isConsentForDataSubject">is consent for data subject</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDomain">
+      <h3>has domain<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#hasDomain</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Domain" title="http://www.semanticweb.org/OntoCookie#Domain">Domain</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNecessity">
+      <h3>has necessity<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#hasNecessity</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Necessity" title="http://www.semanticweb.org/OntoCookie#Necessity">Necessity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPath">
+      <h3>has path<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#hasPath</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Path" title="http://www.semanticweb.org/OntoCookie#Path">Path</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPurpose">
+      <h3>has purpose<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#hasPurpose</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPurposeFor"
+                  title="http://www.semanticweb.org/OntoCookie#isPurposeFor">is purpose for</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus">
+      <h3>has status<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus"
+                  title="https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus">has status</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">exactly</span> 1 <a href="#https://w3id.org/GConsent#Status" title="https://w3id.org/GConsent#Status">Status</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#Status" title="https://w3id.org/GConsent#Status">Status</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/GConsent#inMedium">
+      <h3>in medium<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/GConsent#inMedium</p>
+      <div class="info">
+         <span class="markdown">Specifies the medium through which the consent was given. Examples are web forms, paper documents.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/GConsent#isConsentForDataSubject">
+      <h3>is consent for data subject<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/GConsent#isConsentForDataSubject</p>
+      <div class="info">
+         <span class="markdown">Links a consent instance with the data subject it is associated with.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#https://w3id.org/GConsent#isConsentForDataSubject"
+                  title="https://w3id.org/GConsent#isConsentForDataSubject">is consent for data subject</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">exactly</span> 1 <a href="#https://w3id.org/GConsent#DataSubject" title="https://w3id.org/GConsent#DataSubject">Data Subject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#DataSubject" title="https://w3id.org/GConsent#DataSubject">Data Subject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#hasConsent" title="https://w3id.org/GConsent#hasConsent">has consent</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPurposeFor">
+      <h3>is purpose for<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#isPurposeFor</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Purpose" title="http://www.semanticweb.org/OntoCookie#Purpose">Purpose</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasPurpose" title="http://www.semanticweb.org/OntoCookie#hasPurpose">has purpose</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#consent_id" title="http://www.semanticweb.org/OntoCookie#consent_id">consent id</a>
+      </li>
+      <li>
+         <a href="#cookie_id" title="http://www.semanticweb.org/OntoCookie#cookie_id">cookie id</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/Date" title="https://schema.org/Date">Date</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/duration" title="https://schema.org/duration">duration</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/endDate" title="https://schema.org/endDate">
+            <span>end date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#name" title="http://www.semanticweb.org/OntoCookie#name">name</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/startDate" title="https://schema.org/startDate">
+            <span>start date</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://schema.org/Time" title="https://schema.org/Time">Time</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/url" title="https://schema.org/url">url</a>
+      </li>
+      <li>
+         <a href="#https://schema.org/value" title="https://schema.org/value">value</a>
+      </li>
+   </ul>
+   <div class="entity" id="consent_id">
+      <h3>consent id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#consent_id</p>
+      <div class="comment">
+         <span class="markdown">Used to uniquely identify a consent instance.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#Consent" title="https://w3id.org/GConsent#Consent">Consent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="cookie_id">
+      <h3>cookie id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#cookie_id</p>
+      <div class="info">
+         <span class="markdown">Used to uniquely identify a cookie.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://schema.org/Date">
+      <h3>Date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/Date</p>
+      <div class="info">
+         <span class="markdown">A date value in ISO 8601 date format.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://schema.org/duration">
+      <h3>duration<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/duration</p>
+      <div class="info">
+         <span class="markdown">The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://schema.org/endDate">
+      <h3>end date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/endDate</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/OntoCookie#name</p>
+      <div class="info">
+         <span class="markdown">The name of the data subject that accepted a cookies.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/GConsent#DataSubject" title="https://w3id.org/GConsent#DataSubject">Data Subject</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://schema.org/startDate">
+      <h3>start date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/startDate</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://schema.org/Time">
+      <h3>Time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/Time</p>
+      <div class="info">
+         <span class="markdown">A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] .</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://schema.org/url">
+      <h3>url<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/url</p>
+      <div class="info">
+         <span class="markdown">URL of an item.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Path" title="http://www.semanticweb.org/OntoCookie#Path">Path</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://schema.org/value">
+      <h3>value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://schema.org/value</p>
+      <div class="comment">
+         <span class="markdown">Reffers to the value of a cookie, which is found as a separate fields within cookie logs. Example value: cPFMEtrg26bSUwe6pGuJYx.ZWRhZDc1YjMtZWJlNC00ZWMxLWE4ODgtZTUxOWZjM2YzZDY0..1grieid4t.1grieid4t.0.0.0</span>
+      </div>
+      <div class="info">
+         <span class="markdown">The value of the quantitative value or property value node.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Cookie" title="http://www.semanticweb.org/OntoCookie#Cookie">Cookie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+[1] Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation), Available at https://eur-lex.europa.eu/eli/reg/2016/679/oj. <br/> <br/>
+[2] Stanford University, Protégeé, Available at https://protege.stanford.edu.
+
+
+</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+This research is supported by the CampaNeo project funded by FFG (grant 873839) as well as the smashHit EU project  funded  under  Horizon  2020 (grant 871477). We would like to thank Harshvardhan J. Pandit for sharing helpful insights on cookies, consent and GDPR. <br />
+<br />
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

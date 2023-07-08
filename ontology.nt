@@ -1,0 +1,401 @@
+<http://www.semanticweb.org/OntoCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/elements/1.1/description> "The OntoCookie ontology for semantically representing web cookies and cookie-based data sharing online." .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/abstract> "The OntoCookie ontology is a formal representation of the cookie domain. The ontology was built as a response to the lack of openly available semantic models for cookies. By following a top-down ontology engineering approach, the main classes describing cookies, their purpose, necessity, data subject giving consent for cookies, sub-classes and the relationships between them were defined." .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/contributor> "Anelia Kurteva" .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/contributor> "Anna Fensel" .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/contributor> "Anurag Vats" .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/contributor> "Geni Bushati" .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/contributor> "Petraq Nako" .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/contributor> "Sven Carsten Rasmusen" .
+<http://www.semanticweb.org/OntoCookie> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
+<http://www.semanticweb.org/OntoCookie> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/OntoCookie#associatedWith
+<http://www.semanticweb.org/OntoCookie#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/OntoCookie#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/OntoCookie#associatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#associatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/GConsent#Consent> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/OntoCookie#associatedWith> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/OntoCookie#associatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/GConsent#Consent> .
+<http://www.semanticweb.org/OntoCookie#associatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "associated with" .
+# 
+# http://www.semanticweb.org/OntoCookie#hasDomain
+<http://www.semanticweb.org/OntoCookie#hasDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/OntoCookie#hasDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#hasDomain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/OntoCookie#Domain> .
+<http://www.semanticweb.org/OntoCookie#hasDomain> <http://www.w3.org/2000/01/rdf-schema#label> "has domain" .
+# 
+# http://www.semanticweb.org/OntoCookie#hasNecessity
+<http://www.semanticweb.org/OntoCookie#hasNecessity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/OntoCookie#hasNecessity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/OntoCookie#hasNecessity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#hasNecessity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/OntoCookie#Necessity> .
+<http://www.semanticweb.org/OntoCookie#hasNecessity> <http://www.w3.org/2000/01/rdf-schema#label> "has necessity" .
+# 
+# http://www.semanticweb.org/OntoCookie#hasPath
+<http://www.semanticweb.org/OntoCookie#hasPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/OntoCookie#hasPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/OntoCookie#hasPath> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#hasPath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/OntoCookie#Path> .
+<http://www.semanticweb.org/OntoCookie#hasPath> <http://www.w3.org/2000/01/rdf-schema#label> "has path" .
+# 
+# http://www.semanticweb.org/OntoCookie#hasPurpose
+<http://www.semanticweb.org/OntoCookie#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/OntoCookie#hasPurpose> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/OntoCookie#isPurposeFor> .
+<http://www.semanticweb.org/OntoCookie#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/OntoCookie#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose" .
+# 
+# http://www.semanticweb.org/OntoCookie#isPurposeFor
+<http://www.semanticweb.org/OntoCookie#isPurposeFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/OntoCookie#isPurposeFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/OntoCookie#isPurposeFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#isPurposeFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#isPurposeFor> <http://www.w3.org/2000/01/rdf-schema#label> "is purpose for" .
+# 
+# https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#Consent> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/GConsent#Status> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/GConsent#Status> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has status" .
+# 
+# https://w3id.org/GConsent#hasConsent
+<https://w3id.org/GConsent#hasConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/GConsent#hasConsent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/GConsent#isConsentForDataSubject> .
+<https://w3id.org/GConsent#hasConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/GConsent#hasConsent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#DataSubject> .
+<https://w3id.org/GConsent#hasConsent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/GConsent#Consent> .
+<https://w3id.org/GConsent#hasConsent> <http://purl.org/dc/elements/1.1/description> "Links a data subject to their consent." .
+<https://w3id.org/GConsent#hasConsent> <http://www.w3.org/2000/01/rdf-schema#label> "has consent" .
+# 
+# https://w3id.org/GConsent#inMedium
+<https://w3id.org/GConsent#inMedium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/GConsent#inMedium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/GConsent#inMedium> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#Consent> .
+<https://w3id.org/GConsent#inMedium> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://w3id.org/GConsent#inMedium> <http://purl.org/dc/elements/1.1/description> "Specifies the medium through which the consent was given. Examples are web forms, paper documents." .
+<https://w3id.org/GConsent#inMedium> <http://www.w3.org/2000/01/rdf-schema#label> "in medium" .
+# 
+# https://w3id.org/GConsent#isConsentForDataSubject
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#Consent> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/GConsent#DataSubject> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/GConsent#isConsentForDataSubject> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/GConsent#DataSubject> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://purl.org/dc/elements/1.1/description> "Links a consent instance with the data subject it is associated with." .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "is consent for data subject" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/OntoCookie#consent_id
+<http://www.semanticweb.org/OntoCookie#consent_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/OntoCookie#consent_id> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#Consent> .
+<http://www.semanticweb.org/OntoCookie#consent_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/OntoCookie#consent_id> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to uniquely identify a consent instance." .
+<http://www.semanticweb.org/OntoCookie#consent_id> <http://www.w3.org/2000/01/rdf-schema#label> "consent id" .
+# 
+# http://www.semanticweb.org/OntoCookie#cookie_id
+<http://www.semanticweb.org/OntoCookie#cookie_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/OntoCookie#cookie_id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#cookie_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/OntoCookie#cookie_id> <http://purl.org/dc/elements/1.1/description> "Used to uniquely identify a cookie." .
+<http://www.semanticweb.org/OntoCookie#cookie_id> <http://www.w3.org/2000/01/rdf-schema#label> "cookie id" .
+# 
+# http://www.semanticweb.org/OntoCookie#name
+<http://www.semanticweb.org/OntoCookie#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/OntoCookie#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#DataSubject> .
+<http://www.semanticweb.org/OntoCookie#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/OntoCookie#name> <http://purl.org/dc/elements/1.1/description> "The name of the data subject that accepted a cookies." .
+<http://www.semanticweb.org/OntoCookie#name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# https://schema.org/Date
+<https://schema.org/Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/Date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://schema.org/Date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.org/Date> <http://purl.org/dc/elements/1.1/description> "A date value in ISO 8601 date format." .
+<https://schema.org/Date> <http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+# 
+# https://schema.org/Time
+<https://schema.org/Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/Time> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://schema.org/Time> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.org/Time> <http://purl.org/dc/elements/1.1/description> "A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] ." .
+<https://schema.org/Time> <http://www.w3.org/2000/01/rdf-schema#label> "Time" .
+# 
+# https://schema.org/duration
+<https://schema.org/duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://schema.org/duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/duration> <http://purl.org/dc/elements/1.1/description> "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format." .
+<https://schema.org/duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration" .
+# 
+# https://schema.org/endDate
+<https://schema.org/endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://schema.org/endDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://schema.org/startDate
+<https://schema.org/startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://schema.org/startDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://schema.org/url
+<https://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Path> .
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://schema.org/url> <http://purl.org/dc/elements/1.1/description> "URL of an item." .
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#label> "url" .
+# 
+# https://schema.org/value
+<https://schema.org/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<https://schema.org/value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/value> <http://purl.org/dc/elements/1.1/description> "The value of the quantitative value or property value node." .
+<https://schema.org/value> <http://www.w3.org/2000/01/rdf-schema#comment> "Reffers to the value of a cookie, which is found as a separate fields within cookie logs. Example value: cPFMEtrg26bSUwe6pGuJYx.ZWRhZDc1YjMtZWJlNC00ZWMxLWE4ODgtZTUxOWZjM2YzZDY0..1grieid4t.1grieid4t.0.0.0" .
+<https://schema.org/value> <http://www.w3.org/2000/01/rdf-schema#label> "value" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/OntoCookie#Analytics
+<http://www.semanticweb.org/OntoCookie#Analytics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Analytics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#Analytics> <http://purl.org/dc/elements/1.1/description> "Analytics cookies or performance cookies are used to track website visitors and their user behaviour. This data is then used to improve the way the website works and in turn, used to improve user experience." .
+<http://www.semanticweb.org/OntoCookie#Analytics> <http://www.w3.org/2000/01/rdf-schema#label> "Analytics" .
+# 
+# http://www.semanticweb.org/OntoCookie#AuthenticationCookie
+<http://www.semanticweb.org/OntoCookie#AuthenticationCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#AuthenticationCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#AuthenticationCookie> <http://purl.org/dc/elements/1.1/description> "Authentication cookies are commonly used by web servers to authenticate that a user is logged in, and with which account they are logged in."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#AuthenticationCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Authentication Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#Cookie
+<http://www.semanticweb.org/OntoCookie#Cookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Cookie> <http://purl.org/dc/elements/1.1/description> "HTTP cookies (also called web cookies, Internet cookies, browser cookies, or simply cookies) are small blocks of data created by a web server while a user is browsing a website and placed on the user's computer or other device by the user’s web browser. Cookies are placed on the device used to access a website, and more than one cookie may be placed on a user’s device during a session."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#Cookie> <http://www.w3.org/2000/01/rdf-schema#label> "Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#Domain
+<http://www.semanticweb.org/OntoCookie#Domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Domain> <http://purl.org/dc/elements/1.1/description> "The 'domain' attribute signifies the domain for which the cookie is valid and can be submitted with every request for this domain or its subdomains. If this attribute is not specified, then the hostname of the originating server is used as the default value."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#Domain> <http://www.w3.org/2000/01/rdf-schema#label> "Domain" .
+# 
+# http://www.semanticweb.org/OntoCookie#FirstPartyCookie
+<http://www.semanticweb.org/OntoCookie#FirstPartyCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#FirstPartyCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#TrackingCookie> .
+<http://www.semanticweb.org/OntoCookie#FirstPartyCookie> <http://purl.org/dc/elements/1.1/description> "A first-party cookie - when a cookie's domain attribute will match the domain that is shown in the web browser's address bar."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#FirstPartyCookie> <http://www.w3.org/2000/01/rdf-schema#label> "First Party Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#HostOnlyCookie
+<http://www.semanticweb.org/OntoCookie#HostOnlyCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#HostOnlyCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#HostOnlyCookie> <http://purl.org/dc/elements/1.1/description> "Host Only cookie means that the cookie should be handled by the browser to the server only to the same host/server that firstly sent it to the browser."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#HostOnlyCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Host Only Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#HttpOnlyCookie
+<http://www.semanticweb.org/OntoCookie#HttpOnlyCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#HttpOnlyCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#HttpOnlyCookie> <http://purl.org/dc/elements/1.1/description> "An http-only cookie cannot be accessed by client-side APIs, such as JavaScript. This restriction eliminates the threat of cookie theft via cross-site scripting (XSS). However, the cookie remains vulnerable to cross-site tracing (XST) and cross-site request forgery (CSRF) attacks. A cookie is given this characteristic by adding the HttpOnly flag to the cookie."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#HttpOnlyCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Http Only Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#Marketing
+<http://www.semanticweb.org/OntoCookie#Marketing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Marketing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#Marketing> <http://purl.org/dc/elements/1.1/description> "Tracking track users' online activity to help advertisers deliver more relevant advertising or to limit how many times users see an ad." .
+<http://www.semanticweb.org/OntoCookie#Marketing> <http://www.w3.org/2000/01/rdf-schema#label> "Marketing" .
+# 
+# http://www.semanticweb.org/OntoCookie#Necessary
+<http://www.semanticweb.org/OntoCookie#Necessary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Necessary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Necessity> .
+<http://www.semanticweb.org/OntoCookie#Necessary> <http://purl.org/dc/elements/1.1/description> "A strictly necessary cookie is a type of cookie that is used by the website to function properly, without which the site would not work." .
+<http://www.semanticweb.org/OntoCookie#Necessary> <http://www.w3.org/2000/01/rdf-schema#label> "Necessary" .
+# 
+# http://www.semanticweb.org/OntoCookie#Necessity
+<http://www.semanticweb.org/OntoCookie#Necessity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Necessity> <http://purl.org/dc/elements/1.1/description> "Signifies if a cookie is necessary or optional." .
+<http://www.semanticweb.org/OntoCookie#Necessity> <http://www.w3.org/2000/01/rdf-schema#label> "Necessity" .
+# 
+# http://www.semanticweb.org/OntoCookie#Optional
+<http://www.semanticweb.org/OntoCookie#Optional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Optional> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Necessity> .
+<http://www.semanticweb.org/OntoCookie#Optional> <http://purl.org/dc/elements/1.1/description> "An optional cookie is a type of cookie that is used by the website to request optional or additional information from a website user." .
+<http://www.semanticweb.org/OntoCookie#Optional> <http://www.w3.org/2000/01/rdf-schema#label> "Optional" .
+# 
+# http://www.semanticweb.org/OntoCookie#Path
+<http://www.semanticweb.org/OntoCookie#Path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Path> <http://purl.org/dc/elements/1.1/description> "The 'path' attribute signifies the URL or path for which the cookie is valid. The default path attribute is set as '/'." .
+<http://www.semanticweb.org/OntoCookie#Path> <http://www.w3.org/2000/01/rdf-schema#label> "Path" .
+# 
+# http://www.semanticweb.org/OntoCookie#PersistentCookie
+<http://www.semanticweb.org/OntoCookie#PersistentCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#PersistentCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#PersistentCookie> <http://purl.org/dc/elements/1.1/description> "A persistent cookie expires at a specific date or after a specific length of time. For the persistent cookie's lifespan set by its creator, its information will be transmitted to the server every time the user visits the website that it belongs to, or every time the user views a resource belonging to that website from another website (such as an advertisement)."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#PersistentCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Persistent Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#Profiling
+<http://www.semanticweb.org/OntoCookie#Profiling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Profiling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#Profiling> <http://purl.org/dc/elements/1.1/description> "Cookie profiling, also called web profiling, is the use of persistent or permanent cookies to track a user's overall activity online." .
+<http://www.semanticweb.org/OntoCookie#Profiling> <http://www.w3.org/2000/01/rdf-schema#label> "Profiling" .
+# 
+# http://www.semanticweb.org/OntoCookie#Purpose
+<http://www.semanticweb.org/OntoCookie#Purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Purpose> <http://purl.org/dc/elements/1.1/description> "The purpose of the cookie." .
+<http://www.semanticweb.org/OntoCookie#Purpose> <http://www.w3.org/2000/01/rdf-schema#label> "Purpose" .
+# 
+# http://www.semanticweb.org/OntoCookie#SameSiteCookie
+<http://www.semanticweb.org/OntoCookie#SameSiteCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#SameSiteCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#SameSiteCookie> <http://purl.org/dc/elements/1.1/description> "With attribute SameSite=Strict, the browsers would only send cookies to a target domain that is the same as the origin domain."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#SameSiteCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Same Site Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#SecureCookie
+<http://www.semanticweb.org/OntoCookie#SecureCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#SecureCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#SecureCookie> <http://purl.org/dc/elements/1.1/description> "A secure cookie can only be transmitted over an encrypted connection (i.e. HTTPS). They cannot be transmitted over unencrypted connections (i.e. HTTP). This makes the cookie less likely to be exposed to cookie theft via eavesdropping. A cookie is made secure by adding the Secure flag to the cookie."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#SecureCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Secure Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#ServiceOptimisation
+<http://www.semanticweb.org/OntoCookie#ServiceOptimisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#ServiceOptimisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#ServiceOptimisation> <http://purl.org/dc/elements/1.1/description> "Aims to improve a service process that involves close interaction between customer and a web service." .
+<http://www.semanticweb.org/OntoCookie#ServiceOptimisation> <http://www.w3.org/2000/01/rdf-schema#label> "Service Optimisation" .
+# 
+# http://www.semanticweb.org/OntoCookie#ServicePersonalisation
+<http://www.semanticweb.org/OntoCookie#ServicePersonalisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#ServicePersonalisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#ServicePersonalisation> <http://purl.org/dc/elements/1.1/description> "Personalised service is a type of customer service tailored to the customer's individual needs." .
+<http://www.semanticweb.org/OntoCookie#ServicePersonalisation> <http://www.w3.org/2000/01/rdf-schema#label> "Service Personalisation" .
+# 
+# http://www.semanticweb.org/OntoCookie#ServiceProvision
+<http://www.semanticweb.org/OntoCookie#ServiceProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#ServiceProvision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#ServiceProvision> <http://purl.org/dc/elements/1.1/description> "The provision of service is the act of giving it or making it available to users." .
+<http://www.semanticweb.org/OntoCookie#ServiceProvision> <http://www.w3.org/2000/01/rdf-schema#label> "Service Provision" .
+# 
+# http://www.semanticweb.org/OntoCookie#SessionCookie
+<http://www.semanticweb.org/OntoCookie#SessionCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#SessionCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#SessionCookie> <http://purl.org/dc/elements/1.1/description> "A session cookie (also known as an in-memory cookie, transient cookie or non-persistent cookie) exists only in temporary memory while the user navigates a website. Session cookies expire or are deleted when the user closes the web browser. Session cookies are identified by the browser by the absence of an expiration date assigned to them."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#SessionCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Session Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#SuperCookie
+<http://www.semanticweb.org/OntoCookie#SuperCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#SuperCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#SuperCookie> <http://purl.org/dc/elements/1.1/description> "A supercookie is a cookie with an origin of a top-level domain (such as .com) or a public suffix (such as .co.uk). Ordinary cookies, by contrast, have an origin of a specific domain name, such as example.com."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#SuperCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Super Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#ThirdPartyCookie
+<http://www.semanticweb.org/OntoCookie#ThirdPartyCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#ThirdPartyCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#TrackingCookie> .
+<http://www.semanticweb.org/OntoCookie#ThirdPartyCookie> <http://purl.org/dc/elements/1.1/description> "A third-party cookie, however, belongs to a domain different from the one shown in the address bar."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#ThirdPartyCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Third Party Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#Tracking
+<http://www.semanticweb.org/OntoCookie#Tracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#Tracking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Purpose> .
+<http://www.semanticweb.org/OntoCookie#Tracking> <http://purl.org/dc/elements/1.1/description> "Tracking cookies are commonly used for legitimate marketing and advertising purposes including track the user's behavior." .
+<http://www.semanticweb.org/OntoCookie#Tracking> <http://www.w3.org/2000/01/rdf-schema#label> "Tracking" .
+# 
+# http://www.semanticweb.org/OntoCookie#TrackingCookie
+<http://www.semanticweb.org/OntoCookie#TrackingCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#TrackingCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#TrackingCookie> <http://purl.org/dc/elements/1.1/description> "Tracking cookies, and especially third-party tracking cookies, are commonly used as ways to compile long-term records of individuals' browsing histories."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#TrackingCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Tracking Cookie" .
+# 
+# http://www.semanticweb.org/OntoCookie#ZombieCookie
+<http://www.semanticweb.org/OntoCookie#ZombieCookie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/OntoCookie#ZombieCookie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/OntoCookie#Cookie> .
+<http://www.semanticweb.org/OntoCookie#ZombieCookie> <http://purl.org/dc/elements/1.1/description> "A zombie cookie is data and code that has been placed by a web server on a visitor's computer or other device in a hidden location outside the visitor's web browser's dedicated cookie storage location, and that automatically recreates a HTTP cookie as a regular cookie after the original cookie had been deleted."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/OntoCookie#ZombieCookie> <http://www.w3.org/2000/01/rdf-schema#label> "Zombie Cookie" .
+# 
+# https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GConsent#Status> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired> <http://purl.org/dc/elements/1.1/description> "Indicates the consent has expired." .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExpired> <http://www.w3.org/2000/01/rdf-schema#label> "Expired" .
+# 
+# https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GConsent#Status> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven> <http://purl.org/dc/elements/1.1/description> "Indicates consent is explicitly given." .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusExplicitlyGiven> <http://www.w3.org/2000/01/rdf-schema#label> "Explicitly Given" .
+# 
+# https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GConsent#Status> .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven> <http://purl.org/dc/elements/1.1/description> "Indicates that consent has not been given." .
+<https://openscience.adaptcentre.ie/ontologies/GConsent/docs/ontology#ConsentStatusNotGiven> <http://www.w3.org/2000/01/rdf-schema#label> "Not Given" .
+# 
+# https://w3id.org/GConsent#Consent
+<https://w3id.org/GConsent#Consent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/GConsent#Consent> <http://purl.org/dc/elements/1.1/description> "As per Article 4(11) of the GDPR, ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her;\n\nIn the case of this ontology, 'Consent' is a concept as well as a tangible entity (something that has a provenance record). To separate this distinction with relation to the data subject, the Consent class represents the consent of the data subject in its entirely, including any history and annotations for it.\n\nTo link the Consent instance with the DataSubject instance, use the isConsentForDataSubject and hasConsent properties." .
+<https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#label> "Consent" .
+# 
+# https://w3id.org/GConsent#DataSubject
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/GConsent#DataSubject> <http://purl.org/dc/elements/1.1/description> "Data Subject is defined as an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person; - according to Article 4(1) of the GDPR pertaining to the definition of Personal Data.\n\nIn the case of this ontology, a Data Subject refers to the person(s) as per the definition of the GDPR. Since a Data Subject is a Person, it is defined as a subclass of foaf:Person.\n\nThe Data Subject is linked to the Consent instance via the isConsentForDataSubject and hasConsent properties." .
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject" .
+# 
+# https://w3id.org/GConsent#Status
+<https://w3id.org/GConsent#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/GConsent#Status> <http://purl.org/dc/elements/1.1/description> "Represents the status of consent for the data subject. This allows persisting the determination of the validatity or suitability of consent (as an entity or instance) for use in processing and other activities. Examples: consent is given, consent is requested but not given, consent was withdrawn." .
+<https://w3id.org/GConsent#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

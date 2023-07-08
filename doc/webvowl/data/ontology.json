@@ -1,0 +1,6542 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.obolibrary.org/obo", "http://ontologies.atb-bremen.de/smashHitCore", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "https://qudt.org/2.1/vocab/unit", "http://www.w3.org/ns/dcat", "http://elite.polito.it/ontologies/dogont.owl", "https://www.w3.org/TR/owl-time/", "https://www.omg.org/spec/LCC/Countries/CountryRepresentation", "http://mmisw.org/ont/univmemphis/sensor", "http://www.w3.org/ns/ssn", "http://matonto.org/ontologies/matonto", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.semanticweb.org/RePlanIT", "https://qudt.org/2.1/vocab", "http://www.w3.org/ns/prov", "http://purl.org/dc/dcmitype", "https://mmisw.org/ont/univmemphis/sensor", "http://www.w3.org/2006/time", "http://w3id.org/devops-infra/server", "http://www.w3.org/ns/dpv" ],
+    "title" : {
+      "undefined" : "The RePlanIT ontology for ICT and materials data sharing in the circular economy"
+    },
+    "iri" : "http://www.semanticweb.org/RePlanIT/",
+    "author" : [ "Anelia Kurteva" ],
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Anelia Kurteva",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Alessandro Bozzon",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Ruud Balkenende",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The increasing digitisation and unprecedented amount of data that is generated on a daily basis has resulted in Information and Communications Technology (ICT) devices being disposed of before the end of their functional lifetime. The result is increased ICT hardware manufacturing, which is not sustainable due to the growing demand for critical materials needed and the greenhouse emissions associated with it. A solution is to transition towards a circular economy (CE), which encourages the reuse, recycling, remanufacturing, and repurposing of materials and products. However, the technological adoption of the CE in the ICT sector is currently limited due to the the lack of standardised and findable, accessible, interoperable, reusable (FAIR) ICT data sharing between manufacturers, sustainability experts and technology provides. This paper presents the initial efforts towards an ontology, which interrelates and synchronises data sharing in the materials, ICT and CE domains. The ontology's main application is for building dynamic digital product passports of ICT devices that support FAIR ICT data sharing and sustainable human and machine decision-making.",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "The RePlanIT ontology for ICT and materials data sharing in the circular economy",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "152",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "164",
+    "type" : "owl:Class"
+  }, {
+    "id" : "172",
+    "type" : "owl:Class"
+  }, {
+    "id" : "174",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "184",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "189",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "owl:Class"
+  }, {
+    "id" : "193",
+    "type" : "owl:Class"
+  }, {
+    "id" : "196",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "198",
+    "type" : "owl:Class"
+  }, {
+    "id" : "150",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "183",
+    "type" : "owl:Class"
+  }, {
+    "id" : "173",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "278",
+    "type" : "owl:Class"
+  }, {
+    "id" : "279",
+    "type" : "owl:Class"
+  }, {
+    "id" : "281",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "291",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "292",
+    "type" : "owl:Class"
+  }, {
+    "id" : "209",
+    "type" : "owl:Class"
+  }, {
+    "id" : "220",
+    "type" : "owl:Class"
+  }, {
+    "id" : "297",
+    "type" : "owl:Class"
+  }, {
+    "id" : "298",
+    "type" : "owl:Class"
+  }, {
+    "id" : "299",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "300",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "301",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "302",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "305",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "306",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "166",
+    "type" : "owl:Class"
+  }, {
+    "id" : "307",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "308",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "312",
+    "type" : "owl:Class"
+  }, {
+    "id" : "245",
+    "type" : "owl:Class"
+  }, {
+    "id" : "316",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "317",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "318",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "197",
+    "type" : "owl:Class"
+  }, {
+    "id" : "320",
+    "type" : "owl:Class"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "323",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "286",
+    "type" : "owl:Class"
+  }, {
+    "id" : "322",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "324",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "328",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "329",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "330",
+    "type" : "owl:Class"
+  }, {
+    "id" : "331",
+    "type" : "owl:Class"
+  }, {
+    "id" : "332",
+    "type" : "owl:Class"
+  }, {
+    "id" : "333",
+    "type" : "owl:Class"
+  }, {
+    "id" : "334",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "335",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "340",
+    "type" : "owl:Class"
+  }, {
+    "id" : "341",
+    "type" : "owl:Class"
+  }, {
+    "id" : "227",
+    "type" : "owl:Class"
+  }, {
+    "id" : "343",
+    "type" : "owl:Class"
+  }, {
+    "id" : "344",
+    "type" : "owl:Class"
+  }, {
+    "id" : "345",
+    "type" : "owl:Class"
+  }, {
+    "id" : "304",
+    "type" : "owl:Class"
+  }, {
+    "id" : "346",
+    "type" : "owl:Class"
+  }, {
+    "id" : "261",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "347",
+    "type" : "owl:Class"
+  }, {
+    "id" : "348",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "182",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "247",
+    "type" : "owl:Class"
+  }, {
+    "id" : "315",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "314",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "228",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "352",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "326",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "259",
+    "type" : "owl:Class"
+  }, {
+    "id" : "353",
+    "type" : "owl:Class"
+  }, {
+    "id" : "357",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "362",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "288",
+    "type" : "owl:Class"
+  }, {
+    "id" : "296",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "381",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "211",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "235",
+    "type" : "owl:Class"
+  }, {
+    "id" : "171",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "424",
+    "type" : "owl:Class"
+  }, {
+    "id" : "336",
+    "type" : "owl:Class"
+  }, {
+    "id" : "295",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "414",
+    "type" : "owl:Class"
+  }, {
+    "id" : "271",
+    "type" : "owl:Class"
+  }, {
+    "id" : "207",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "390",
+    "type" : "owl:Class"
+  }, {
+    "id" : "270",
+    "type" : "owl:Class"
+  }, {
+    "id" : "274",
+    "type" : "owl:Class"
+  }, {
+    "id" : "205",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "310",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "216",
+    "type" : "owl:Class"
+  }, {
+    "id" : "213",
+    "type" : "owl:Class"
+  }, {
+    "id" : "290",
+    "type" : "owl:Class"
+  }, {
+    "id" : "203",
+    "type" : "owl:Class"
+  }, {
+    "id" : "195",
+    "type" : "owl:Class"
+  }, {
+    "id" : "232",
+    "type" : "owl:Class"
+  }, {
+    "id" : "350",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "253",
+    "type" : "owl:Class"
+  }, {
+    "id" : "349",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "280",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "319",
+    "type" : "owl:Class"
+  }, {
+    "id" : "186",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "272",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "owl:Class"
+  }, {
+    "id" : "159",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "250",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "294",
+    "type" : "owl:Class"
+  }, {
+    "id" : "385",
+    "type" : "owl:Class"
+  }, {
+    "id" : "179",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "257",
+    "type" : "owl:Class"
+  }, {
+    "id" : "243",
+    "type" : "owl:Class"
+  }, {
+    "id" : "447",
+    "type" : "owl:Class"
+  }, {
+    "id" : "434",
+    "type" : "owl:Class"
+  }, {
+    "id" : "199",
+    "type" : "owl:Class"
+  }, {
+    "id" : "282",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "201",
+    "type" : "owl:Class"
+  }, {
+    "id" : "176",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "289",
+    "type" : "owl:Class"
+  }, {
+    "id" : "403",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "239",
+    "type" : "owl:Class"
+  }, {
+    "id" : "360",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "448",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "214",
+    "type" : "owl:Class"
+  }, {
+    "id" : "342",
+    "type" : "owl:Class"
+  }, {
+    "id" : "169",
+    "type" : "owl:Class"
+  }, {
+    "id" : "161",
+    "type" : "owl:Class"
+  }, {
+    "id" : "265",
+    "type" : "owl:Class"
+  }, {
+    "id" : "177",
+    "type" : "owl:Class"
+  }, {
+    "id" : "268",
+    "type" : "owl:Class"
+  }, {
+    "id" : "398",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "255",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "owl:Class"
+  }, {
+    "id" : "364",
+    "type" : "owl:Class"
+  }, {
+    "id" : "273",
+    "type" : "owl:Class"
+  }, {
+    "id" : "375",
+    "type" : "owl:Class"
+  }, {
+    "id" : "194",
+    "type" : "owl:Class"
+  }, {
+    "id" : "263",
+    "type" : "owl:Class"
+  }, {
+    "id" : "394",
+    "type" : "owl:Class"
+  }, {
+    "id" : "449",
+    "type" : "owl:Class"
+  }, {
+    "id" : "337",
+    "type" : "owl:Class"
+  }, {
+    "id" : "351",
+    "type" : "owl:Class"
+  }, {
+    "id" : "156",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  }, {
+    "id" : "188",
+    "type" : "owl:Class"
+  }, {
+    "id" : "419",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "510",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "276",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "241",
+    "type" : "owl:Class"
+  }, {
+    "id" : "421",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "489",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "412",
+    "type" : "owl:Class"
+  }, {
+    "id" : "387",
+    "type" : "owl:Class"
+  }, {
+    "id" : "168",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://qudt.org/2.1/vocab/unit/DEG_C",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "en" : "Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty."
+    },
+    "label" : {
+      "IRI-based" : "DEG_C",
+      "en" : "Degree Celsius"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Microsoft",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Microsoft",
+      "undefined" : "Microsoft"
+    },
+    "id" : "27",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Switch",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A network switch connects devices in a network to each other, enabling them to talk by exchanging data packets."
+    },
+    "label" : {
+      "IRI-based" : "Switch",
+      "undefined" : "Switch"
+    },
+    "subClasses" : [ "31", "32" ],
+    "id" : "29",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Fan",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A computer fan is any fan inside, or attached to, a computer case used for active cooling. Fans are used to draw cooler air into the case from the outside, expel warm air from inside and move air across a heat sink to cool a particular component."
+    },
+    "label" : {
+      "IRI-based" : "Fan",
+      "undefined" : "Fan"
+    },
+    "id" : "39",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Person",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "description" : {
+      "en" : "Person agents are people."
+    },
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "53",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit",
+    "baseIri" : "https://qudt.org/2.1/vocab",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Represents types of measurement units."
+    },
+    "label" : {
+      "IRI-based" : "unit",
+      "undefined" : "Unit"
+    },
+    "subClasses" : [ "94", "95", "96", "97", "98", "99", "100", "22", "101", "102" ],
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/VaporChamber",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A vapor chamber is a planar heat pipe, which can spread heat in two dimensions."
+    },
+    "label" : {
+      "IRI-based" : "VaporChamber",
+      "undefined" : "Vapor Chamber"
+    },
+    "id" : "103",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Mercury",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Mercury is a chemical element with the symbol Hg and atomic number 80. It is also known as quicksilver and was formerly named hydrargyrum from the Greek words, hydor and argyros."
+    },
+    "label" : {
+      "IRI-based" : "Mercury",
+      "undefined" : "Mercury"
+    },
+    "id" : "104",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Procurement",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Procurement is the method of discovering and agreeing to terms and purchasing goods, services, or other works from an external source, often with the use of a tendering or competitive bidding process."
+    },
+    "label" : {
+      "IRI-based" : "Procurement",
+      "undefined" : "Procurement"
+    },
+    "id" : "105",
+    "superClasses" : [ "106" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ComputerMouse",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A small, movable device that lets an user control a range of things on a computer."
+    },
+    "label" : {
+      "IRI-based" : "ComputerMouse",
+      "undefined" : "Computer Mouse"
+    },
+    "id" : "107",
+    "superClasses" : [ "108" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DesktopComputer",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A desktop computer is a personal computing device designed to fit on top of a typical office desk. It houses the physical hardware that makes a computer run and connects to input devices such as the monitor, keyboard and mouse users interact with."
+    },
+    "label" : {
+      "IRI-based" : "DesktopComputer",
+      "undefined" : "Desktop Computer"
+    },
+    "comment" : {
+      "undefined" : "Also reffered to as Personal Computer (PC)."
+    },
+    "id" : "59",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Platinum",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Platinum is a chemical element with the symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, silverish-white transition metal. Platinum is one of the least reactive metals. It has remarkable resistance to corrosion, even at high temperatures, and is therefore considered a noble metal."
+    },
+    "label" : {
+      "IRI-based" : "Platinum",
+      "undefined" : "Platinum"
+    },
+    "id" : "138",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Alloy",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A metal alloy is a substance that combines more than one metal or mixes a metal with other non-metallic elements."
+    },
+    "label" : {
+      "IRI-based" : "Alloy",
+      "undefined" : "Alloy"
+    },
+    "subClasses" : [ "141", "142" ],
+    "id" : "16",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/SolidStateDrive",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An SSD, or solid-state drive, is a type of storage device used in computers. This non-volatile storage media stores persistent data on solid-state flash memory. SSDs replace traditional hard disk drives (HDDs) in computers and perform the same basic functions as a hard drive."
+    },
+    "label" : {
+      "IRI-based" : "SolidStateDrive",
+      "undefined" : "Solid State Drive"
+    },
+    "id" : "135",
+    "superClasses" : [ "133" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Encrypt",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Data encryption is a security method where information is encoded and can only be accessed or decrypted by a user with the correct encryption key."
+    },
+    "label" : {
+      "IRI-based" : "Encrypt",
+      "undefined" : "Encrypt"
+    },
+    "id" : "143",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Certification",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Device or component certification."
+    },
+    "label" : {
+      "IRI-based" : "Certification",
+      "undefined" : "Certification"
+    },
+    "id" : "152"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/MacOS",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "macOS is a Unix operating system developed and marketed by Apple Inc."
+    },
+    "label" : {
+      "IRI-based" : "MacOS",
+      "undefined" : "Mac OS"
+    },
+    "id" : "71",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/VideoCard",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A Video Card is a specialist piece of Hardware that accelerates video-related processes."
+    },
+    "label" : {
+      "IRI-based" : "VideoCard",
+      "undefined" : "Video Card"
+    },
+    "id" : "164",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Warranty",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A written guarantee, issued to the purchaser of an article by its manufacturer, promising to repair or replace it if necessary within a specified period of time."
+    },
+    "label" : {
+      "IRI-based" : "Warranty",
+      "undefined" : "Warranty"
+    },
+    "id" : "172",
+    "superClasses" : [ "173" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Failure",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A failure of an ICT's hardware component that leads to applying a circular strategy."
+    },
+    "label" : {
+      "IRI-based" : "Failure",
+      "undefined" : "Failure"
+    },
+    "id" : "174",
+    "superClasses" : [ "175" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/GreenHouseGasDuringUseTime",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The amount of greenhouse gasses (expressed in kgCO₂eq.) emitted while the product is in use."
+    },
+    "label" : {
+      "IRI-based" : "GreenHouseGasDuringUseTime",
+      "undefined" : "Green House Gas During Use Time"
+    },
+    "id" : "82",
+    "superClasses" : [ "83" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CoolingSystem",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Cooling systems are passive or active systems that are designed to regulate and dissipate the heat generated by a computer so as to maintain optimal performance and protect the computer from damage that will occur from overheating."
+    },
+    "label" : {
+      "IRI-based" : "CoolingSystem",
+      "undefined" : "Cooling System"
+    },
+    "subClasses" : [ "176", "177", "39", "103" ],
+    "id" : "40",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Manufacturer",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An entity such as a company that produces goods in large numbers, usually in a factory using machines."
+    },
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "undefined" : "Manufacturer"
+    },
+    "id" : "184",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ElectricalSwict",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Electrical switches do not require physical or manual contact and can automatically perform a task."
+    },
+    "label" : {
+      "IRI-based" : "ElectricalSwict",
+      "undefined" : "Electrical Switch"
+    },
+    "id" : "31",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/NetworkCard",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A network interface controller is a computer hardware component that connects a computer to a computer network. Early network interface controllers were commonly implemented on expansion cards that plugged into a computer bus."
+    },
+    "label" : {
+      "IRI-based" : "NetworkCard",
+      "undefined" : "Network Card"
+    },
+    "id" : "189",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://w3id.org/devops-infra/server#PhysicalServer",
+    "baseIri" : "http://w3id.org/devops-infra/server",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A physical server refers to a piece of hardware."
+    },
+    "label" : {
+      "IRI-based" : "PhysicalServer",
+      "undefined" : "Physical Server"
+    },
+    "attributes" : [ "external" ],
+    "id" : "145",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Testing",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Hardware and/of software testing of a system."
+    },
+    "label" : {
+      "IRI-based" : "Testing",
+      "undefined" : "Testing"
+    },
+    "subClasses" : [ "194", "195" ],
+    "id" : "193",
+    "superClasses" : [ "106" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Acquire",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To come into possession or control of the data"
+    },
+    "label" : {
+      "IRI-based" : "Acquire",
+      "undefined" : "Acquire"
+    },
+    "attributes" : [ "external" ],
+    "id" : "196",
+    "superClasses" : [ "197" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HardDrive",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A hard drive is the hardware component that stores digital content."
+    },
+    "label" : {
+      "IRI-based" : "HardDrive",
+      "undefined" : "Hard Drive"
+    },
+    "id" : "132",
+    "superClasses" : [ "133" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Repairer",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "The agent responsible for the repairment of a device."
+    },
+    "label" : {
+      "IRI-based" : "Repairer",
+      "en" : "Repairer"
+    },
+    "id" : "56",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Recovery",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "Any operation with the primary aim of reversing obsolescence."
+    },
+    "label" : {
+      "IRI-based" : "Recovery",
+      "en" : "Recovery"
+    },
+    "id" : "198",
+    "superClasses" : [ "199" ]
+  }, {
+    "iri" : "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country",
+    "baseIri" : "https://www.omg.org/spec/LCC/Countries/CountryRepresentation",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A geopolitical entity representing a country or dependent territory."
+    },
+    "label" : {
+      "IRI-based" : "Country",
+      "undefined" : "Country"
+    },
+    "attributes" : [ "external" ],
+    "id" : "150",
+    "superClasses" : [ "214" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Role",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "description" : {
+      "en" : "A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships."
+    },
+    "label" : {
+      "IRI-based" : "Role",
+      "en" : "Role"
+    },
+    "subClasses" : [ "184", "232", "114", "56", "62", "65", "69", "74", "78" ],
+    "attributes" : [ "external" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Gram",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The gram (originally gramme; SI unit symbol g) is a unit of mass in the International System of Units (SI) equal to one one thousandth of a kilogram."
+    },
+    "label" : {
+      "IRI-based" : "Gram",
+      "en" : "Gram"
+    },
+    "id" : "95",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Ultrabook",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The term 'ultrabook' has been introduced by Intel. A notebook can be considered an ultrabook if it's no more than 1.5cm thick, has an Intel processor, and an SSD."
+    },
+    "label" : {
+      "IRI-based" : "Ultrabook",
+      "undefined" : "Ultrabook"
+    },
+    "id" : "42",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/GreenHouseGasEmissions",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The emission into the earth's atmosphere of any of various gases such as carbon dioxide (CO₂), that contribute to the greenhouse effect and climate change."
+    },
+    "label" : {
+      "IRI-based" : "GreenHouseGasEmissions",
+      "en" : "Green House Gas Emissions"
+    },
+    "subClasses" : [ "82", "87" ],
+    "id" : "83",
+    "superClasses" : [ "179" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Subnotebook",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A portable microcomputer similar to but smaller and lighter than a notebook computer."
+    },
+    "label" : {
+      "IRI-based" : "Subnotebook",
+      "undefined" : "Subnotebook"
+    },
+    "id" : "89",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://matonto.org/ontologies/matonto#Metals",
+    "baseIri" : "http://matonto.org/ontologies/matonto",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Metals are elementary substances, such as gold, silver and copper. They are crystalline when solid and naturally occur in minerals. They are often good conductors of electricity and heat, shiny and malleable."
+    },
+    "label" : {
+      "IRI-based" : "Metals",
+      "undefined" : "Metals"
+    },
+    "subClasses" : [ "11", "14", "16" ],
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "http://matonto.org/ontologies/matonto#Ceramics",
+    "baseIri" : "http://matonto.org/ontologies/matonto",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A ceramic is any of the various hard, brittle, heat-resistant and corrosion-resistant materials made by shaping and then firing an inorganic, nonmetallic material, such as clay, at a high temperature."
+    },
+    "label" : {
+      "IRI-based" : "Ceramics",
+      "undefined" : "Ceramics"
+    },
+    "attributes" : [ "external" ],
+    "id" : "130",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DeviceOwner",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "The owner of a specific hardware device. A client might request device repair on the behalf of the device's owner."
+    },
+    "label" : {
+      "IRI-based" : "DeviceOwner",
+      "en" : "Device Owner"
+    },
+    "id" : "74",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Status",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Represents the status of a process."
+    },
+    "label" : {
+      "IRI-based" : "Status",
+      "undefined" : "Status"
+    },
+    "subClasses" : [ "209", "211", "182", "186", "188" ],
+    "id" : "183"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/EconomicalIndicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Economic indicators allow analysis of economic performance."
+    },
+    "label" : {
+      "IRI-based" : "EconomicalIndicator",
+      "undefined" : "Economical Indicator"
+    },
+    "subClasses" : [ "272", "273", "172", "274" ],
+    "id" : "173",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Client",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "An agent seeking a service for his/her device."
+    },
+    "label" : {
+      "IRI-based" : "Client",
+      "undefined" : "Client"
+    },
+    "id" : "65",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Organization",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An organization is a social or legal institution such as a company, society, etc."
+    },
+    "label" : {
+      "IRI-based" : "Organization",
+      "undefined" : "Organization"
+    },
+    "attributes" : [ "external" ],
+    "id" : "278",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Memory",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The memory available for usage in an ICT device such as laptop."
+    },
+    "label" : {
+      "IRI-based" : "Memory",
+      "undefined" : "Memory"
+    },
+    "id" : "279",
+    "superClasses" : [ "280" ]
+  }, {
+    "iri" : "http://www.w3.org/2006/time#TemporalEntity",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A temporal interval or instant."
+    },
+    "label" : {
+      "IRI-based" : "TemporalEntity",
+      "undefined" : "Temporal Entity"
+    },
+    "subClasses" : [ "282", "26" ],
+    "attributes" : [ "external" ],
+    "id" : "281"
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/NCIT_C142235",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A sensor used to detect electrical current."
+    },
+    "label" : {
+      "IRI-based" : "NCIT_C142235",
+      "undefined" : "Electrical Current Sensor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Activity",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Activity running in or supported by software."
+    },
+    "label" : {
+      "IRI-based" : "Activity",
+      "undefined" : "Activity"
+    },
+    "subClasses" : [ "289", "19", "193", "105", "290" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "291",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CoolingRate",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoolingRate"
+    },
+    "id" : "292",
+    "superClasses" : [ "280" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/InProgress",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A process in progress (not complete yet)."
+    },
+    "label" : {
+      "IRI-based" : "InProgress",
+      "undefined" : "In Progress"
+    },
+    "id" : "209",
+    "superClasses" : [ "183" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/MaterialCriticality",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Identification of critical raw materials and their supply risk, vulnerability to supply restriction, and environmental implications. Possible to express as low-med-high in aggregate.."
+    },
+    "label" : {
+      "IRI-based" : "MaterialCriticality",
+      "undefined" : "Material Criticality"
+    },
+    "subClasses" : [ "294", "295", "296" ],
+    "id" : "220",
+    "superClasses" : [ "179" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Toschiba",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Toschiba",
+      "undefined" : "Toschiba"
+    },
+    "id" : "297",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Repair",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "To restore (something damaged, faulty, or worn) to a good condition."
+    },
+    "label" : {
+      "IRI-based" : "Repair",
+      "en" : "Repair"
+    },
+    "id" : "298",
+    "superClasses" : [ "199" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "299",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "300",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "301",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "302",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "305",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "306",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "110",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Cobalt",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Magnesium is a chemical element with the symbol Mg and atomic number 12. Elemental magnesium is a gray-white lightweight metal, two-thirds the density of aluminium. Magnesium has the lowest melting (923 K (650 °C)) and the lowest boiling point 1,363 K (1,090 °C) of all the alkaline earth metals"
+    },
+    "label" : {
+      "IRI-based" : "Cobalt",
+      "undefined" : "Magnesium"
+    },
+    "id" : "166",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "307",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "308",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DigitalProductPassport",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A collection of static and dynamic data associated with an ICT device that can be interpreted by machines and humans in order to support sustainable decision making."
+    },
+    "label" : {
+      "IRI-based" : "DigitalProductPassport",
+      "undefined" : "Digital Product Passport"
+    },
+    "id" : "312"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Speakers",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A computer speaker is a hardware device that generates sound. It can be both and external and an integrated device within computers."
+    },
+    "label" : {
+      "IRI-based" : "Speakers",
+      "undefined" : "Speakers"
+    },
+    "id" : "245",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "316",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "317",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "318",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Obtain",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To solicit or gather data from someone for a purpose."
+    },
+    "label" : {
+      "IRI-based" : "Obtain",
+      "undefined" : "Obtain"
+    },
+    "subClasses" : [ "196", "319" ],
+    "attributes" : [ "external" ],
+    "id" : "197",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/RenewableResources",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The amount of renewable resources (expressed in kg) used in the product."
+    },
+    "label" : {
+      "IRI-based" : "RenewableResources",
+      "undefined" : "Renewable Resources"
+    },
+    "id" : "320",
+    "superClasses" : [ "205" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "151",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "323",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Destruct",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To process data in a way it no longer exists or cannot be repaired"
+    },
+    "label" : {
+      "IRI-based" : "Destruct",
+      "undefined" : "Destruct"
+    },
+    "attributes" : [ "external" ],
+    "id" : "286",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "322",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "324",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "328",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "329",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Result",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The result of an activity, process or sensor observation."
+    },
+    "label" : {
+      "IRI-based" : "Result",
+      "undefined" : "Result"
+    },
+    "comment" : {
+      "undefined" : "The value 20 as the height of a certain tree together with the unit, e.g., Meter."
+    },
+    "attributes" : [ "external" ],
+    "id" : "330"
+  }, {
+    "instances" : 0,
+    "union" : [ "106", "199" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "331"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "332"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "333"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Decrypt",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Decryption is a process that transforms encrypted information into its original format."
+    },
+    "label" : {
+      "IRI-based" : "Decrypt",
+      "undefined" : "Decrypt"
+    },
+    "id" : "334",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DataProvider",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "An agent providing data to another agent."
+    },
+    "label" : {
+      "IRI-based" : "DataProvider",
+      "en" : "Data Provider"
+    },
+    "id" : "114",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Dell",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dell",
+      "undefined" : "Dell"
+    },
+    "id" : "335",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://schema.org/Brand",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "description" : {
+      "en" : "A brand is a name used by an organization or business person for labeling a product, product group, or similar."
+    },
+    "label" : {
+      "IRI-based" : "Brand",
+      "en" : "Brand"
+    },
+    "subClasses" : [ "336", "337", "27", "297", "335" ],
+    "attributes" : [ "external" ],
+    "id" : "28"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "340"
+  }, {
+    "instances" : 0,
+    "union" : [ "119", "342", "271" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "341"
+  }, {
+    "instances" : 0,
+    "union" : [ "106", "199" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "227"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "343"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "344"
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "345"
+  }, {
+    "instances" : 0,
+    "union" : [ "133", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "304"
+  }, {
+    "instances" : 0,
+    "union" : [ "106", "199" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "346"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Keyboard",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A computer's keyboard."
+    },
+    "label" : {
+      "IRI-based" : "Keyboard",
+      "undefined" : "Keyboard"
+    },
+    "id" : "261",
+    "superClasses" : [ "37" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "106", "281", "199" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Aluminium",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Aluminium (aluminum in American and Canadian English) is a chemical element with the symbol Al and atomic number 13.  Aluminium visually resembles silver, both in its color and in its great ability to reflect light. It is soft, non-magnetic and ductile."
+    },
+    "label" : {
+      "IRI-based" : "Aluminium",
+      "undefined" : "Aluminium"
+    },
+    "id" : "347",
+    "superClasses" : [ "14" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "133", "30" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "348"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/NonFerrous",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Non-ferrous metals do not contain iron."
+    },
+    "label" : {
+      "IRI-based" : "NonFerrous",
+      "undefined" : "Non Ferrous"
+    },
+    "subClasses" : [ "347", "349", "350", "104", "351", "148", "154", "156", "138", "159", "161", "163", "166" ],
+    "id" : "14",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Delayed",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A process that has been delayed before or while running."
+    },
+    "label" : {
+      "IRI-based" : "Delayed",
+      "undefined" : "Delayed"
+    },
+    "id" : "182",
+    "superClasses" : [ "183" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/GigaBYTE",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The gigabyte is a multiple of the unit byte for digital information storage. The prefix giga means 10 in the International System of Units (SI), therefore 1 gigabyte is 1,000,000,000 bytes)."
+    },
+    "label" : {
+      "IRI-based" : "GigaBYTE",
+      "en" : "Giga Byte"
+    },
+    "attributes" : [ "external" ],
+    "id" : "94",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Port",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A port is a number assigned to uniquely identify a connection endpoint and to direct data to a specific service."
+    },
+    "label" : {
+      "IRI-based" : "Port",
+      "undefined" : "Port"
+    },
+    "id" : "247",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "315",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DataServer",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "In computing, a data server is a piece of computer hardware or software (computer program) that provides functionality for other programs or devices, called \"clients\"."
+    },
+    "label" : {
+      "IRI-based" : "DataServer",
+      "undefined" : "Data Server"
+    },
+    "subClasses" : [ "171", "145" ],
+    "comment" : {
+      "undefined" : "In this ontology we focus on the hardware of data servers."
+    },
+    "id" : "146",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "314",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "192",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "228",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "352",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "140",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "326",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "222",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "231",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CPU",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A Central Processing Unit or CPU is electronic machinery that carries out instructions from programs that allows a computer or other device to perform its tasks."
+    },
+    "label" : {
+      "IRI-based" : "CPU",
+      "undefined" : "CPU"
+    },
+    "id" : "259",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Refurbishment",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "Te process of returning a used product to a satisfactory working condition that may be inferior to the original specification."
+    },
+    "label" : {
+      "IRI-based" : "Refurbishment",
+      "en" : "Refurbishment"
+    },
+    "id" : "353",
+    "superClasses" : [ "199" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Recycling",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "The recovery of materials from particular classes of products. For circular use recycling must be postponed as long as possible, as recycling of materials implies loss of function and value. Nevertheless, recycling is the last option when products or parts can no longer be kept in a functional\ncondition."
+    },
+    "label" : {
+      "IRI-based" : "Recycling",
+      "en" : "Recycling"
+    },
+    "id" : "357",
+    "superClasses" : [ "199" ]
+  }, {
+    "iri" : "http://matonto.org/ontologies/matonto#Material",
+    "baseIri" : "http://matonto.org/ontologies/matonto",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A chemical substance that is studied in materials science."
+    },
+    "label" : {
+      "IRI-based" : "Material",
+      "undefined" : "Material"
+    },
+    "subClasses" : [ "118", "121", "125", "127", "12", "130" ],
+    "attributes" : [ "external" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/MegaBYTE",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A megabyte is defined here as one million Bytes."
+    },
+    "label" : {
+      "IRI-based" : "MegaBYTE",
+      "en" : "Mega Byte"
+    },
+    "attributes" : [ "external" ],
+    "id" : "96",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Retrieve",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To retrieve data, often in an automated manner"
+    },
+    "label" : {
+      "IRI-based" : "Retrieve",
+      "undefined" : "Retrieve"
+    },
+    "attributes" : [ "external" ],
+    "id" : "362",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Linux",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Linux is a Unix-like, open source and community-developed operating system (OS) for computers, servers, mainframes, mobile devices and embedded devices."
+    },
+    "label" : {
+      "IRI-based" : "Linux",
+      "undefined" : "Linux"
+    },
+    "id" : "76",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Store",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To keep data for future use."
+    },
+    "label" : {
+      "IRI-based" : "Store",
+      "undefined" : "Store"
+    },
+    "attributes" : [ "external" ],
+    "id" : "288",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HighCriticality",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighCriticality",
+      "undefined" : "High Criticality"
+    },
+    "id" : "296",
+    "superClasses" : [ "220" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Recycler",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "The agent responsible for the recycling of a device."
+    },
+    "label" : {
+      "IRI-based" : "Recycler",
+      "en" : "Recycler"
+    },
+    "id" : "62",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://purl.org/dc/dcmitype/Software",
+    "baseIri" : "http://purl.org/dc/dcmitype",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A computer program in source or compiled form."
+    },
+    "label" : {
+      "IRI-based" : "Software",
+      "undefined" : "Software"
+    },
+    "subClasses" : [ "137", "72", "116" ],
+    "comment" : {
+      "undefined" : "Examples include a C source file, MS-Windows .exe executable, or Perl script."
+    },
+    "attributes" : [ "external" ],
+    "id" : "112"
+  }, {
+    "instances" : 0,
+    "union" : [ "106", "281", "199" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "381"
+  }, {
+    "iri" : "http://elite.polito.it/ontologies/dogont.owl#Computer",
+    "baseIri" : "http://elite.polito.it/ontologies/dogont.owl",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A machine for performing calculations automatically, work and play."
+    },
+    "label" : {
+      "IRI-based" : "Computer",
+      "undefined" : "Computer"
+    },
+    "subClasses" : [ "59", "43" ],
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://matonto.org/ontologies/matonto#Glasses",
+    "baseIri" : "http://matonto.org/ontologies/matonto",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Glass is a non-crystalline, often transparent, amorphous solid that has widespread practical, technological, and decorative use."
+    },
+    "label" : {
+      "IRI-based" : "Glasses",
+      "undefined" : "Glasses"
+    },
+    "attributes" : [ "external" ],
+    "id" : "121",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Ferrous",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Ferrous metals are any metal that contains iron, such as stainless steel."
+    },
+    "label" : {
+      "IRI-based" : "Ferrous",
+      "undefined" : "Ferrous"
+    },
+    "subClasses" : [ "67" ],
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/OperatingSystem",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An operating system (OS) is the program that, after being initially loaded into the computer by a boot program, manages all of the other application."
+    },
+    "label" : {
+      "IRI-based" : "OperatingSystem",
+      "undefined" : "Operating System"
+    },
+    "subClasses" : [ "71", "76", "80" ],
+    "id" : "72",
+    "superClasses" : [ "112" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Complete",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A status has been completed."
+    },
+    "label" : {
+      "IRI-based" : "Complete",
+      "undefined" : "Complete"
+    },
+    "id" : "211",
+    "superClasses" : [ "183" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Laptop",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A laptop or a laptop computer is a small portable computer."
+    },
+    "label" : {
+      "IRI-based" : "Laptop",
+      "undefined" : "Laptop"
+    },
+    "subClasses" : [ "85", "89", "42" ],
+    "id" : "43",
+    "superClasses" : [ "60" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/GreenHouseGassDuringProduction",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The amount of greenhouse gasses (expressed in kgCO₂eq.) emitted during production."
+    },
+    "label" : {
+      "IRI-based" : "GreenHouseGassDuringProduction",
+      "undefined" : "Green House Gass During Production"
+    },
+    "id" : "87",
+    "superClasses" : [ "83" ]
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Instant",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A temporal entity with zero extent or duration"
+    },
+    "label" : {
+      "IRI-based" : "Instant",
+      "undefined" : "Instant"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "281" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Maintenance",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "The variety of support services provided for the optimization and/or repair of server, network and storage hardware."
+    },
+    "label" : {
+      "IRI-based" : "Maintenance",
+      "en" : "Maintenance"
+    },
+    "subClasses" : [ "47" ],
+    "id" : "48",
+    "superClasses" : [ "199" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Cadmium",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Cadmium is a chemical element with the symbol Cd and atomic number 48.\nCadmium is a soft, malleable, ductile, silvery-white divalent metal. It is similar in many respects to zinc but forms complex compounds.[5] Unlike most other metals, cadmium is resistant to corrosion and is used as a protective plate on other metals."
+    },
+    "label" : {
+      "IRI-based" : "Cadmium",
+      "undefined" : "Cadmium"
+    },
+    "id" : "163",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Peripheral",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Peripheral devices can be external or internal."
+    },
+    "label" : {
+      "IRI-based" : "Peripheral",
+      "undefined" : "Peripheral"
+    },
+    "subClasses" : [ "52", "4" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Chassis",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A computer case, also known as a computer chassis, is the enclosure that contains most of the components of a personal computer."
+    },
+    "label" : {
+      "IRI-based" : "Chassis",
+      "undefined" : "Chassis"
+    },
+    "id" : "235",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://w3id.org/devops-infra/server#VirtualServer",
+    "baseIri" : "http://w3id.org/devops-infra/server",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A virtual server mimics the functionality of a physical dedicated server. Multiple virtual servers may be implemented on a single bare metal server, each with its own OS, independent provisioning, and software."
+    },
+    "label" : {
+      "IRI-based" : "VirtualServer",
+      "undefined" : "Virtual Server"
+    },
+    "attributes" : [ "external" ],
+    "id" : "171",
+    "superClasses" : [ "146" ]
+  }, {
+    "iri" : "https://mmisw.org/ont/univmemphis/sensor/Temperature",
+    "baseIri" : "https://mmisw.org/ont/univmemphis/sensor",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A temperature sensor."
+    },
+    "label" : {
+      "IRI-based" : "Temperature",
+      "undefined" : "Temperature Sensor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "91",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Internal",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An internal device processes data or executes a program. The term 'internal' describes a device installed inside the computer, unlike the external peripheral devices."
+    },
+    "label" : {
+      "IRI-based" : "Internal",
+      "undefined" : "Internal"
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Derive",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To create new derivative data from the original data."
+    },
+    "label" : {
+      "IRI-based" : "Derive",
+      "undefined" : "Derive"
+    },
+    "attributes" : [ "external" ],
+    "id" : "424",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HP",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HP",
+      "undefined" : "HP"
+    },
+    "id" : "336",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/LowCriticality",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LowCriticality",
+      "undefined" : "Low Criticality"
+    },
+    "id" : "295",
+    "superClasses" : [ "220" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/GigaHZ",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The hertz (symbol Hz) is the SI unit of frequency defined as the number of cycles per second of a periodic phenomenon."
+    },
+    "label" : {
+      "IRI-based" : "GigaHZ",
+      "en" : "Giga Herz"
+    },
+    "attributes" : [ "external" ],
+    "id" : "100",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Observation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Act of carrying out an (Observation) procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."
+    },
+    "label" : {
+      "IRI-based" : "Observation",
+      "undefined" : "Observation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "414"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Indicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "An indicator used to measure how circular a device is."
+    },
+    "label" : {
+      "IRI-based" : "Indicator",
+      "en" : "Indicator"
+    },
+    "subClasses" : [ "280", "179", "173" ],
+    "id" : "271"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ProductCircularity",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Percentage of circular material flow in the total products in use flow. Which is equal to the weighted average of the material circularity of all parts."
+    },
+    "label" : {
+      "IRI-based" : "ProductCircularity",
+      "undefined" : "Product Circularity"
+    },
+    "id" : "207",
+    "superClasses" : [ "179" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/MechanicalSwict",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Mechanical switches require physical or manual contact with switch for operation."
+    },
+    "label" : {
+      "IRI-based" : "MechanicalSwict",
+      "undefined" : "Mechanical Switch"
+    },
+    "id" : "32",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/SoftwareSupport",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Software support is a service provided by a software publisher that delivers technical product help and advice to registered users."
+    },
+    "label" : {
+      "IRI-based" : "SoftwareSupport",
+      "undefined" : "Software Support"
+    },
+    "id" : "390",
+    "superClasses" : [ "280" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/GraphicsCard",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A graphics card (also called a video card, display card, graphics adapter, VGA card/VGA, video adapter, display adapter, or mistakenly GPU) is an expansion card which generates a feed of output images to a display device, such as a computer monitor."
+    },
+    "label" : {
+      "IRI-based" : "GraphicsCard",
+      "undefined" : "Graphics Card"
+    },
+    "id" : "270",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/PartsAvailability",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The availability status of parts for purchase."
+    },
+    "label" : {
+      "IRI-based" : "PartsAvailability",
+      "undefined" : "Parts Availability"
+    },
+    "id" : "274",
+    "superClasses" : [ "173" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/PrimaryResource",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The amount of resources (expressed in kg) used in the product."
+    },
+    "label" : {
+      "IRI-based" : "PrimaryResource",
+      "undefined" : "Primary Resource"
+    },
+    "subClasses" : [ "364", "320" ],
+    "id" : "205",
+    "superClasses" : [ "179" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."
+    },
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "subClasses" : [ "53", "278", "360" ],
+    "attributes" : [ "external" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Iron",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Iron is a chemical element with symbol Fe and atomic number 26.  Iron is the most widely used of all the metals, accounting for over 90% of worldwide metal production. \nIts low cost and high strength often make it the material of choice material to withstand stress or transmit forces, such as the construction of machinery and machine tools, rails, automobiles, ship hulls, concrete reinforcing bars, and the load-carrying framework of buildings."
+    },
+    "label" : {
+      "IRI-based" : "Iron",
+      "undefined" : "Iron"
+    },
+    "id" : "67",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/InputData",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Input data for a process, activity, measurement etc."
+    },
+    "label" : {
+      "IRI-based" : "InputData"
+    },
+    "id" : "310",
+    "superClasses" : [ "342" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/Property",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."
+    },
+    "label" : {
+      "IRI-based" : "Property",
+      "undefined" : "Property"
+    },
+    "subClasses" : [ "419" ],
+    "attributes" : [ "external" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Transform",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To change the form or nature of data."
+    },
+    "label" : {
+      "IRI-based" : "Transform",
+      "undefined" : "Transform"
+    },
+    "subClasses" : [ "334", "424", "143" ],
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Use",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Use of data."
+    },
+    "label" : {
+      "IRI-based" : "Use",
+      "undefined" : "Use"
+    },
+    "subClasses" : [ "412", "362" ],
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/EnvironmentalImpact",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Life Cycle Assessment (LCA) results in midpoints (e.g. ozone depletion, land use) or endpoints (e.g health, eco-toxicity, resource use), or single endpoint (aggregate Pt)"
+    },
+    "label" : {
+      "IRI-based" : "EnvironmentalImpact",
+      "undefined" : "Environmental Impact"
+    },
+    "id" : "216",
+    "superClasses" : [ "179" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Microphone",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An instrument capable of transforming sound waves into changes in electric currents or voltage, used in recording or transmitting sound."
+    },
+    "label" : {
+      "IRI-based" : "Microphone",
+      "undefined" : "Microphone"
+    },
+    "id" : "213",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Recommendation",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A recommendation made by software to an end user."
+    },
+    "label" : {
+      "IRI-based" : "Recommendation",
+      "undefined" : "Recommendation"
+    },
+    "id" : "290",
+    "superClasses" : [ "106" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/MaterialCircularity",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Circular materials are fully recycled or renewable, and fully reused. Materials can be partially circular, which is expressed as the percentage material circularity."
+    },
+    "label" : {
+      "IRI-based" : "MaterialCircularity",
+      "undefined" : "Material Circularity"
+    },
+    "id" : "203",
+    "superClasses" : [ "179" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HardwareTesting",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Testing of hardware and its components. Usually performed by an IT specialist in a specialised facility."
+    },
+    "label" : {
+      "IRI-based" : "HardwareTesting",
+      "undefined" : "Hardware Testing"
+    },
+    "id" : "195",
+    "superClasses" : [ "193" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Procurer",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "An agent that has the task to procurer service or devices."
+    },
+    "label" : {
+      "IRI-based" : "Procurer",
+      "en" : "Procurer"
+    },
+    "id" : "232",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Copper",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Copper is a chemical element with the symbol Cu and atomic number 29. It is a soft, malleable, and ductile metal with very high thermal and electrical conductivity. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement."
+    },
+    "label" : {
+      "IRI-based" : "Copper",
+      "undefined" : "Copper"
+    },
+    "id" : "350",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Tin",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Tin is a chemical element with the symbol Sn (from Latin: stannum) and atomic number 50. Tin is a soft, malleable, ductile and highly crystalline silvery-white metal. Tin has long been used in alloys with lead as solder."
+    },
+    "label" : {
+      "IRI-based" : "Tin",
+      "undefined" : "Tin"
+    },
+    "id" : "154",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/PointingDevice",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A pointing device is a human interface device that allows a user to input spatial (i.e., continuous and multi-dimensional) data to a computer."
+    },
+    "label" : {
+      "IRI-based" : "PointingDevice",
+      "undefined" : "Pointing Device"
+    },
+    "subClasses" : [ "107", "403" ],
+    "id" : "108",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/SecuritySoftware",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Computer security software or cybersecurity software is any computer program designed to influence information security."
+    },
+    "label" : {
+      "IRI-based" : "SecuritySoftware",
+      "undefined" : "Security Software"
+    },
+    "subClasses" : [ "394", "169" ],
+    "id" : "116",
+    "superClasses" : [ "112" ]
+  }, {
+    "iri" : "http://matonto.org/ontologies/matonto#Composites",
+    "baseIri" : "http://matonto.org/ontologies/matonto",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A composite material is a material which is produced from two or more constituent materials."
+    },
+    "label" : {
+      "IRI-based" : "Composites",
+      "undefined" : "Composites"
+    },
+    "attributes" : [ "external" ],
+    "id" : "127",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/MegaHZ",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Megahertz is a C.G.S System unit for  'Frequency' expressed as MHz."
+    },
+    "label" : {
+      "IRI-based" : "MegaHZ",
+      "en" : "Mega Herz"
+    },
+    "attributes" : [ "external" ],
+    "id" : "98",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/NCIT_C49839",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A device designed to produce an electric current through chemical reaction."
+    },
+    "label" : {
+      "IRI-based" : "NCIT_C49839",
+      "undefined" : "Battery"
+    },
+    "attributes" : [ "external" ],
+    "id" : "253",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Gold",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is the most malleable of all metals and is a relatively rare material."
+    },
+    "label" : {
+      "IRI-based" : "Gold",
+      "undefined" : "Gold"
+    },
+    "id" : "349",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Refurbisher",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "The agent responsible for the refurbishment of a device."
+    },
+    "label" : {
+      "IRI-based" : "Refurbisher",
+      "en" : "Refurbisher"
+    },
+    "id" : "78",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/FunctionalIndicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Indicators related to the functional characteristics of ICT devices."
+    },
+    "label" : {
+      "IRI-based" : "FunctionalIndicator",
+      "undefined" : "Functional Indicator"
+    },
+    "subClasses" : [ "292", "387", "385", "390", "279", "434" ],
+    "id" : "280",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/TeraBYTE",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The terabyte is a multiple of the unit byte for digital information. The prefix tera means 10^12 in the International System of Units (SI), and therefore 1 terabyte is 1000000000000 bytes, or 1 trillion bytes, or 1000 gigabytes."
+    },
+    "label" : {
+      "IRI-based" : "TeraBYTE",
+      "en" : "Tera Byte"
+    },
+    "attributes" : [ "external" ],
+    "id" : "99",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Collect",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To gather data from someone."
+    },
+    "label" : {
+      "IRI-based" : "Collect",
+      "undefined" : "Collect"
+    },
+    "attributes" : [ "external" ],
+    "id" : "319",
+    "superClasses" : [ "197" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Suspended",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A process that has been suspended."
+    },
+    "label" : {
+      "IRI-based" : "Suspended",
+      "undefined" : "Suspended"
+    },
+    "id" : "186",
+    "superClasses" : [ "183" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/MicrosoftWindows",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Microsoft Windows, also called Windows and Windows OS, computer operating system (OS) developed by Microsoft Corporation to run personal computers (PCs)."
+    },
+    "label" : {
+      "IRI-based" : "MicrosoftWindows",
+      "undefined" : "Microsoft Windows"
+    },
+    "id" : "80",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/PurchaseCost",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The total cost for the item(s) or service purchased including taxes, shipping costs and other fees."
+    },
+    "label" : {
+      "IRI-based" : "PurchaseCost",
+      "en" : "Purchase Cost"
+    },
+    "id" : "272",
+    "superClasses" : [ "173" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Lithium",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Lithium is a chemical element with the symbol Li and atomic number 3. It is a soft, silvery-white alkali metal. Under standard conditions, it is the least dense metal and the least dense solid element. \n\nLithium and its compounds have several industrial applications, including heat-resistant glass and ceramics, lithium grease lubricants, flux additives for iron, steel and aluminium production, lithium metal batteries, and lithium-ion batteries. These uses consume more than three-quarters of lithium production"
+    },
+    "label" : {
+      "IRI-based" : "Lithium",
+      "undefined" : "Lithium"
+    },
+    "id" : "148",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Nickel",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Nickel is a chemical element with symbol Ni and atomic number 28. It is a silvery-white lustrous metal with a slight golden tinge. \n\nNickel is used in many recognizable industrial and consumer products, including stainless steel, alnico magnets, coinage, rechargeable batteries (e.g. nickel-iron), electric guitar strings, microphone capsules, plating on plumbing fixtures,[86] and special alloys such as permalloy, elinvar, and invar."
+    },
+    "label" : {
+      "IRI-based" : "Nickel",
+      "undefined" : "Nickel"
+    },
+    "id" : "159",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."
+    },
+    "label" : {
+      "IRI-based" : "Sensor",
+      "undefined" : "Sensor"
+    },
+    "subClasses" : [ "91", "45", "50", "1", "7", "9" ],
+    "comment" : {
+      "undefined" : "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Chipset",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A chipset is a set of electronic components in one or more integrated circuits known as a \"Data Flow Management System\" that manages the data flow between the processor, memory and peripherals. It is usually found on the motherboard."
+    },
+    "label" : {
+      "IRI-based" : "Chipset",
+      "undefined" : "Chipset"
+    },
+    "id" : "250",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DataProcessing",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataProcessing",
+      "undefined" : "Data Processing"
+    },
+    "subClasses" : [ "18", "21", "197", "286", "288" ],
+    "id" : "19",
+    "superClasses" : [ "106" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/KilloGM",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds."
+    },
+    "label" : {
+      "IRI-based" : "KilloGM",
+      "en" : "Killogram"
+    },
+    "attributes" : [ "external" ],
+    "id" : "101",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HardwareComponent",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Hardware components are the physical parts of ICT devices such as laptops, data servers, hard drives etc."
+    },
+    "label" : {
+      "IRI-based" : "HardwareComponent",
+      "undefined" : "Hardware Component"
+    },
+    "subClasses" : [ "259", "261", "263", "265", "189", "268", "270", "164", "253", "255", "257", "241", "243", "245", "247", "2", "250", "133", "235", "40", "108", "239", "213" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Medium_Criticality",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Medium_Criticality",
+      "undefined" : "Medium Criticality"
+    },
+    "id" : "294",
+    "superClasses" : [ "220" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DeviceSpeed",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The speed with which HDs can copy information. Hard drive speeds are measured in megabytes per second or MBps."
+    },
+    "label" : {
+      "IRI-based" : "DeviceSpeed",
+      "undefined" : "Device Speed"
+    },
+    "id" : "385",
+    "superClasses" : [ "280" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/SustainabilityIndicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Indicators used to assess how sustainable an ICT device is."
+    },
+    "label" : {
+      "IRI-based" : "SustainabilityIndicator",
+      "undefined" : "Sustainability Indicator"
+    },
+    "subClasses" : [ "216", "218", "220", "83", "201", "203", "205", "207" ],
+    "id" : "179",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://mmisw.org/ont/univmemphis/sensor/_Pressure",
+    "baseIri" : "https://mmisw.org/ont/univmemphis/sensor",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A sensor that detect pressure."
+    },
+    "label" : {
+      "IRI-based" : "_Pressure",
+      "undefined" : "Pressure Sensor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ICTDevice",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Internet and Communications (ICT) device is any laptop, tablet, telephone, smartphone, desktop computer, console, printer, speaker, camera or other electronic equipment that could be used for processing or storing information."
+    },
+    "label" : {
+      "IRI-based" : "ICTDevice",
+      "undefined" : "ICT Device"
+    },
+    "subClasses" : [ "29", "146", "60" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/NCIT_C49858",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An apparatus for taking photographs, generally consisting of a lightproof enclosure having an aperture with a shuttered lens through which the image of an object is focused and recorded on a photosensitive film or plate."
+    },
+    "label" : {
+      "IRI-based" : "NCIT_C49858",
+      "undefined" : "Camera"
+    },
+    "attributes" : [ "external" ],
+    "id" : "257",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Slot",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Aslot, or expansion slot, is an engineered technique for adding capability to a computer in the form of connection pinholes (typically, in the range of 16 to 64 closely-spaced holes) and a place to fit an expansion card containing the circuitry that provides some specialized capability, such as video"
+    },
+    "label" : {
+      "IRI-based" : "Slot",
+      "undefined" : "Slot"
+    },
+    "id" : "243",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Plastic",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient."
+    },
+    "label" : {
+      "IRI-based" : "Plastic",
+      "undefined" : "Plastic"
+    },
+    "id" : "447",
+    "superClasses" : [ "118" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DataTransportRate",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A measure of data that is transferred from one location to another in a given amount of time."
+    },
+    "label" : {
+      "IRI-based" : "DataTransportRate",
+      "undefined" : "Data Transport Rate"
+    },
+    "id" : "434",
+    "superClasses" : [ "280" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CircularStrategy",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "A range of efficiency and productivity enhancing activities carried out within the Circular Economy (CE)."
+    },
+    "label" : {
+      "IRI-based" : "CircularStrategy",
+      "en" : "Circular Strategy"
+    },
+    "subClasses" : [ "353", "357", "48", "448", "449", "198", "298" ],
+    "id" : "199"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Interval",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A temporal entity with an extent or duration."
+    },
+    "label" : {
+      "IRI-based" : "Interval",
+      "undefined" : "Interval"
+    },
+    "attributes" : [ "external" ],
+    "id" : "282",
+    "superClasses" : [ "281" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/KilloW-HR",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The kilowatt hour, or kilowatt-hour, (kW \\hr, or kWh) is a unit of energy equal to 1000 watt hours or 3.6 megajoules. For constant power, energy in watt hours is the product of power in watts and time in hours. The kilowatt hour is most commonly known as a billing unit for energy delivered to consumers by electric utilities."
+    },
+    "label" : {
+      "IRI-based" : "KilloW-HR",
+      "en" : "Killo Watt per Hour"
+    },
+    "attributes" : [ "external" ],
+    "id" : "102",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://qudt.org/2.1/vocab/unit/DEG_C-PER-HR",
+    "baseIri" : "https://qudt.org/2.1/vocab/unit",
+    "instances" : 0,
+    "description" : {
+      "en" : "Degree Celsius per Hour} is a unit for 'Temperature Per Time'."
+    },
+    "label" : {
+      "IRI-based" : "DEG_C-PER-HR",
+      "en" : "Degree Celsius per Hour"
+    },
+    "attributes" : [ "external" ],
+    "id" : "97",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Waste",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Waste",
+      "en" : "Waste"
+    },
+    "id" : "201",
+    "superClasses" : [ "179" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CoolingPad",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A laptop/notebook cooler, cooling pad, cooler pad or chill mat is an accessory for laptop computers intended to reduce their operating temperature when the laptop is unable to sufficiently cool itself."
+    },
+    "label" : {
+      "IRI-based" : "CoolingPad",
+      "undefined" : "Cooling Pad"
+    },
+    "id" : "176",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/VMHost",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A virtual machine (VM) host is a virtual machine operated and hosted from a remote cloud server."
+    },
+    "label" : {
+      "IRI-based" : "VMHost",
+      "undefined" : "VM Host"
+    },
+    "id" : "137",
+    "superClasses" : [ "112" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Audit",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An official examination of the accounts of a business."
+    },
+    "label" : {
+      "IRI-based" : "Audit",
+      "undefined" : "Audit"
+    },
+    "id" : "289",
+    "superClasses" : [ "106" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Trackpad",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A touchpad is used to control the mouse pointer, also known as the cursor on a laptop."
+    },
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "Trackpad",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Trackpad",
+      "undefined" : "Trackpad"
+    },
+    "id" : "403",
+    "superClasses" : [ "108" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Notebook",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A notebook is a personal computer that remains lightweight and small and typically weigh less than a laptop."
+    },
+    "label" : {
+      "IRI-based" : "Notebook",
+      "undefined" : "Notebook"
+    },
+    "id" : "85",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Inductor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An inductor, or induction coil, stores electrical energy in a magnetic field."
+    },
+    "label" : {
+      "IRI-based" : "Inductor",
+      "undefined" : "Inductor"
+    },
+    "id" : "239",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#SoftwareAgent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "description" : {
+      "en" : "A software agent is a running software."
+    },
+    "label" : {
+      "IRI-based" : "SoftwareAgent",
+      "en" : "Software Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "360",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "http://mmisw.org/ont/univmemphis/sensor#Humidity",
+    "baseIri" : "http://mmisw.org/ont/univmemphis/sensor",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A humidity sensor."
+    },
+    "label" : {
+      "IRI-based" : "Humidity",
+      "undefined" : "Humidity Sensor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Remanufacturer",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "The agent responsible for remanufacturing a device."
+    },
+    "label" : {
+      "IRI-based" : "Remanufacturer",
+      "en" : "Remanufacturer"
+    },
+    "id" : "69",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "http://matonto.org/ontologies/matonto#Polymers",
+    "baseIri" : "http://matonto.org/ontologies/matonto",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A polymer is a substance or material consisting of very large molecules called macromolecules, composed of many repeating subunits."
+    },
+    "label" : {
+      "IRI-based" : "Polymers",
+      "undefined" : "Polymers"
+    },
+    "subClasses" : [ "447" ],
+    "attributes" : [ "external" ],
+    "id" : "118",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Remanufacturing",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "Returning a used product to at least its original performance with a warranty that is equivalent or better than that of the newly manufactured product."
+    },
+    "label" : {
+      "IRI-based" : "Remanufacturing",
+      "en" : "Remanufacturing"
+    },
+    "id" : "448",
+    "superClasses" : [ "199" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Brass",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Brass is an alloy of copper and zinc, in proportions which can be varied to achieve different mechanical, electrical, and chemical properties. It is a substitutional alloy: atoms of the two constituents may replace each other within the same crystal structure."
+    },
+    "label" : {
+      "IRI-based" : "Brass",
+      "undefined" : "Brass"
+    },
+    "id" : "142",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Location",
+    "baseIri" : "https://www.omg.org/spec/LCC/Countries/CountryRepresentation",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A place or position in time and/or space, including virtual place."
+    },
+    "label" : {
+      "IRI-based" : "Location",
+      "undefined" : "Location"
+    },
+    "subClasses" : [ "150", "375" ],
+    "attributes" : [ "external" ],
+    "id" : "214"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Data",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Data that is used for or is the result of a specific process."
+    },
+    "label" : {
+      "IRI-based" : "Data",
+      "undefined" : "Data"
+    },
+    "subClasses" : [ "398", "310" ],
+    "id" : "342"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/AuthenticationSoftware",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Authentication software is a means of authenticating users through a software application or mobile app, instead of a hardware device."
+    },
+    "label" : {
+      "IRI-based" : "AuthenticationSoftware",
+      "undefined" : "Authentication Software"
+    },
+    "subClasses" : [ "168" ],
+    "id" : "169",
+    "superClasses" : [ "116" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Silver",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Silver is a chemical element with the symbol Ag and atomic number 47. A soft, white, lustrous transition metal, it exhibits the highest electrical conductivity, thermal conductivity, and reflectivity of any metal."
+    },
+    "label" : {
+      "IRI-based" : "Silver",
+      "undefined" : "Silver"
+    },
+    "id" : "161",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/RailKit",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Rail kits are used to mount servers and other necessary IT equipment."
+    },
+    "label" : {
+      "IRI-based" : "RailKit",
+      "undefined" : "Rail Kit"
+    },
+    "id" : "265",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HeatSink",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A heat sink is a passive heat exchanger that transfers the heat generated by an electronic or a mechanical device to a fluid medium, often air or a liquid coolant, where it is dissipated away from the device, thereby allowing regulation of the device's temperature."
+    },
+    "label" : {
+      "IRI-based" : "HeatSink",
+      "undefined" : "Heat Sink"
+    },
+    "id" : "177",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/WirelessCard",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A wireless card or wireless network card is a wireless terminal device used to enable internet connection through the wireless connection network under the coverage of a wireless local area network. Therefore, a wireless card installed on an industrial computer is used to enable wireless connectivity to the internet."
+    },
+    "label" : {
+      "IRI-based" : "WirelessCard",
+      "undefined" : "Wireless Card"
+    },
+    "id" : "268",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/OutputData",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Data that is an output of a process, activity, measurement etc."
+    },
+    "label" : {
+      "IRI-based" : "OutputData",
+      "undefined" : "Output Data"
+    },
+    "id" : "398",
+    "superClasses" : [ "342" ]
+  }, {
+    "iri" : "http://ontologies.atb-bremen.de/smashHitCore#PhotoelectricSensor",
+    "baseIri" : "http://ontologies.atb-bremen.de/smashHitCore",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A photoelectric sensor uses a light beam to detect smoke."
+    },
+    "label" : {
+      "IRI-based" : "PhotoelectricSensor",
+      "undefined" : "Photoelectric Sensor"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Capacitor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A capacitor is a small piece of electrical hardware that can hold electrical energy within a circuit or field."
+    },
+    "label" : {
+      "IRI-based" : "Capacitor",
+      "undefined" : "Capacitor"
+    },
+    "id" : "255",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/External",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "ICT devices and components that go outside the computer case are external peripherals."
+    },
+    "label" : {
+      "IRI-based" : "External",
+      "undefined" : "External"
+    },
+    "id" : "52",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CarbonSteel",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Carbon steel is a steel with carbon content from about 0.05 up to 2.1 percent by weight. The definition of carbon steel from the American Iron and Steel Institute (AISI) states:\n\n- no minimum content is specified or required for chromium, cobalt, molybdenum, nickel, niobium, titanium, tungsten, vanadium, zirconium, or any other element to be added to obtain a desired alloying effect;\n- the specified minimum for copper does not exceed 0.40%;\n- or the maximum content specified for any of the following elements does not exceed the percentages noted: manganese 1.65%; silicon 0.60%; copper 0.60%."
+    },
+    "label" : {
+      "IRI-based" : "CarbonSteel",
+      "undefined" : "Carbon Steel"
+    },
+    "id" : "141",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/NonRenewableResources",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The amount of non-renewable resources (expressed in kg) used in the product."
+    },
+    "label" : {
+      "IRI-based" : "NonRenewableResources",
+      "undefined" : "Non-Renewable Resources"
+    },
+    "id" : "364",
+    "superClasses" : [ "205" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DeliveryTime",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The amount of time it takes for an ICT device or component to be delivered."
+    },
+    "label" : {
+      "IRI-based" : "DeliveryTime",
+      "undefined" : "Delivery Time"
+    },
+    "id" : "273",
+    "superClasses" : [ "173" ]
+  }, {
+    "iri" : "https://schema.org/City",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An inhabited place of greater size, population, or importance than a town or village."
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "undefined" : "City"
+    },
+    "attributes" : [ "external" ],
+    "id" : "375",
+    "superClasses" : [ "214" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/SoftwareTesting",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Testing the software of a device."
+    },
+    "label" : {
+      "IRI-based" : "SoftwareTesting",
+      "undefined" : "Software Testing"
+    },
+    "id" : "194",
+    "superClasses" : [ "193" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/BasicInputOutputChip",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "The basic input/output system (BIOS) is the part of an operating system that links the specific hardware devices to the software."
+    },
+    "label" : {
+      "IRI-based" : "BasicInputOutputChip",
+      "undefined" : "BIOS Chip"
+    },
+    "id" : "263",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/AntivirusSoftware",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An antivirus is a software program used to prevent, detect, and eliminate malware and viruses."
+    },
+    "label" : {
+      "IRI-based" : "AntivirusSoftware",
+      "undefined" : "Antivirus Software"
+    },
+    "id" : "394",
+    "superClasses" : [ "116" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Reuse",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Reuse is the action or practice of using an item, whether for its original purpose (conventional reuse) or to fulfill a different function."
+    },
+    "label" : {
+      "IRI-based" : "Reuse",
+      "undefined" : "Reuse"
+    },
+    "id" : "449",
+    "superClasses" : [ "199" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Apple",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Apple",
+      "undefined" : "Apple"
+    },
+    "id" : "337",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Lead",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Lead is a chemical element with the symbol Pb (from the Latin plumbum) and atomic number 82. It is a heavy metal that is denser than most common materials. Lead is soft and malleable, and also has a relatively low melting point. The largest use of lead in the early 21st century is in lead–acid batteries."
+    },
+    "label" : {
+      "IRI-based" : "Lead",
+      "undefined" : "Lead"
+    },
+    "id" : "351",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Magnesium",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Magnesium is a chemical element with the symbol Mg and atomic number 12. It is a shiny gray metal having a low density, low melting point and high chemical reactivity. Like the other alkaline earth metals (group 2 of the periodic table) it occurs naturally only in combination with other elements ."
+    },
+    "label" : {
+      "IRI-based" : "Magnesium",
+      "undefined" : "Magnesium"
+    },
+    "id" : "156",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/FingerprintSensor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A fingerprint sensor is an electronic device used to capture a digital image of the fingerprint pattern."
+    },
+    "label" : {
+      "IRI-based" : "FingerprintSensor",
+      "undefined" : "Fingerprint Sensor"
+    },
+    "id" : "45",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/StorageDevice",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A storage device is any type of computing hardware that is used for storing, porting or extracting data files and objects."
+    },
+    "label" : {
+      "IRI-based" : "StorageDevice",
+      "undefined" : "Storage Device"
+    },
+    "subClasses" : [ "132", "135" ],
+    "id" : "133",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Terminated",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A process that has been terminated."
+    },
+    "label" : {
+      "IRI-based" : "Terminated",
+      "undefined" : "Terminated"
+    },
+    "id" : "188",
+    "superClasses" : [ "183" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/ObservableProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "An observable quality (property, characteristic) of a feature of interest."
+    },
+    "label" : {
+      "IRI-based" : "ObservableProperty",
+      "undefined" : "Observable Property"
+    },
+    "comment" : {
+      "undefined" : "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."
+    },
+    "attributes" : [ "external" ],
+    "id" : "419",
+    "superClasses" : [ "34" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "123",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "510",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "276",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Display",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "A computer's display."
+    },
+    "label" : {
+      "IRI-based" : "Display",
+      "undefined" : "Display"
+    },
+    "id" : "241",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "421",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "489",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/PredictiveMaintenance",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "en" : "Predictive maintenance techniques are designed to help determine the condition of in-service equipment in order to estimate when maintenance should be performed."
+    },
+    "label" : {
+      "IRI-based" : "PredictiveMaintenance",
+      "en" : "Predictive Maintenance"
+    },
+    "id" : "47",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://matonto.org/ontologies/matonto#Nanomaterials",
+    "baseIri" : "http://matonto.org/ontologies/matonto",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Nanomaterials can be defined as materials possessing, at minimum, one external dimension measuring 1-100nm."
+    },
+    "label" : {
+      "IRI-based" : "Nanomaterials",
+      "undefined" : "Nanomaterials"
+    },
+    "attributes" : [ "external" ],
+    "id" : "125",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dpv#Analyse",
+    "baseIri" : "http://www.w3.org/ns/dpv",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "To study or examine the data in detail"
+    },
+    "label" : {
+      "IRI-based" : "Analyse",
+      "undefined" : "Analyse"
+    },
+    "attributes" : [ "external" ],
+    "id" : "412",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Performance",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Performance is a rating of how fast the ICT device performs its operations and if it encounters errors."
+    },
+    "label" : {
+      "IRI-based" : "Performance",
+      "undefined" : "Performance"
+    },
+    "id" : "387",
+    "superClasses" : [ "280" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Fingerprinting",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "instances" : 0,
+    "description" : {
+      "undefined" : "Fingerprinting is one form of biometrics, a science which uses people's physical or biological characteristics to identify them."
+    },
+    "label" : {
+      "IRI-based" : "Fingerprinting",
+      "undefined" : "Fingerprinting"
+    },
+    "id" : "168",
+    "superClasses" : [ "169" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "191",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "217",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "221",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "223",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "230",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "240",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "242",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "244",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "246",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "248",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "249",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "251",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "254",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "256",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "258",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "260",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "262",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "264",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "266",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "267",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "269",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "275",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "277",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "283",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "284",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "285",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "287",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "293",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "303",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "309",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "311",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "313",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "321",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "325",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "327",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "338",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "339",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "354",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "355",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "356",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "358",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "359",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "361",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "218",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "363",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "365",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "366",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "367",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "368",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "369",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "370",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "371",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "372",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "373",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "374",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "376",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "377",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "378",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "379",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "380",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "382",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "383",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "384",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "386",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "388",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "389",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "180",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "393",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "395",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "396",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "397",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "399",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "400",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "401",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "402",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "404",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "405",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "406",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "407",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "408",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "409",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "410",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "411",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "413",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "415",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "416",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "417",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "418",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "420",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "422",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "423",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "425",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "426",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "427",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "428",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "429",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "430",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "431",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "432",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "433",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "435",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "436",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "437",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "438",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "439",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "440",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "441",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "442",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "443",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "444",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "175",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "229",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "445",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "224",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "450",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "451",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "452",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "453",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "454",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "455",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "456",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "457",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "458",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "459",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "460",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "461",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "462",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "463",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "464",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "465",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "466",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "467",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "468",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "469",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "470",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "471",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "472",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "473",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "474",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "475",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "476",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "477",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "478",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "479",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "480",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "481",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "482",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "483",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "484",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "485",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "486",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "487",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "488",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "490",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "491",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "492",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "493",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "494",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "495",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "496",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "497",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "392",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "498",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "499",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "500",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "501",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "502",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "503",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "504",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "505",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "391",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "506",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "507",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "508",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "509",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "511",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "512",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "513",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "446",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "514",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "515",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "516",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "517",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "518",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "519",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "3"
+  }, {
+    "range" : "2",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "6"
+  }, {
+    "range" : "2",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "8"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "12",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "range" : "12",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "19",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://www.w3.org/TR/owl-time/#time:hasBeginning",
+    "baseIri" : "https://www.w3.org/TR/owl-time/",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "time:hasBeginning",
+      "undefined" : "hasBeginning"
+    },
+    "domain" : "25",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/forProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "forProperty"
+    },
+    "domain" : "2",
+    "subproperty" : [ "35" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HardwareComponentWeight",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "38",
+    "description" : {
+      "undefined" : "Weight of a hardware component."
+    },
+    "label" : {
+      "IRI-based" : "HardwareComponentWeight",
+      "undefined" : "Hardware Component Weight"
+    },
+    "domain" : "37",
+    "attributes" : [ "datatype" ],
+    "id" : "36"
+  }, {
+    "range" : "43",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "2",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "48",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "2",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "5",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "57",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "60",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "57",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "60",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "57",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "11",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "57",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "range" : "72",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "57",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "72",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "57",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
+  }, {
+    "range" : "72",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "83",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "range" : "43",
+    "domain" : "85",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "83",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "43",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "2",
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ICTDeviceAge",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "93",
+    "description" : {
+      "undefined" : "The age of an ICT device since its 1st manufacturing measured in months."
+    },
+    "label" : {
+      "IRI-based" : "ICTDeviceAge",
+      "undefined" : "ICT Device Age"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Hardware_Component_Age",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "110",
+    "description" : {
+      "undefined" : "The age of a hardware component measured in months."
+    },
+    "label" : {
+      "IRI-based" : "Hardware_Component_Age",
+      "undefined" : "Hardware Component Age"
+    },
+    "domain" : "37",
+    "attributes" : [ "datatype" ],
+    "id" : "109"
+  }, {
+    "range" : "112",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "111"
+  }, {
+    "range" : "57",
+    "domain" : "114",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "113"
+  }, {
+    "range" : "112",
+    "domain" : "116",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "115"
+  }, {
+    "range" : "119",
+    "domain" : "118",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "range" : "119",
+    "domain" : "121",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/AgentID",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "123",
+    "description" : {
+      "undefined" : "Identifier of an agent."
+    },
+    "label" : {
+      "IRI-based" : "AgentID",
+      "undefined" : "Agent ID"
+    },
+    "domain" : "54",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "122"
+  }, {
+    "range" : "119",
+    "domain" : "125",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "range" : "119",
+    "domain" : "127",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "126"
+  }, {
+    "range" : "119",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "128"
+  }, {
+    "range" : "119",
+    "domain" : "130",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "range" : "133",
+    "domain" : "132",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "133",
+    "domain" : "135",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "112",
+    "domain" : "137",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Temperature",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "140",
+    "label" : {
+      "IRI-based" : "Temperature",
+      "undefined" : "Temperature"
+    },
+    "domain" : "22",
+    "attributes" : [ "datatype" ],
+    "id" : "139"
+  }, {
+    "range" : "146",
+    "domain" : "145",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "14",
+    "domain" : "148",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Country",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "151",
+    "description" : {
+      "undefined" : "A political state or nation or its territory."
+    },
+    "label" : {
+      "IRI-based" : "Country",
+      "undefined" : "Country"
+    },
+    "domain" : "150",
+    "attributes" : [ "datatype" ],
+    "id" : "149"
+  }, {
+    "range" : "14",
+    "domain" : "154",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "range" : "14",
+    "domain" : "156",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "155"
+  }, {
+    "range" : "14",
+    "domain" : "138",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "range" : "14",
+    "domain" : "159",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "range" : "14",
+    "domain" : "161",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "14",
+    "domain" : "163",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "162"
+  }, {
+    "range" : "14",
+    "domain" : "166",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "165"
+  }, {
+    "range" : "169",
+    "domain" : "168",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "167"
+  }, {
+    "range" : "146",
+    "domain" : "171",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "170"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasSustainabilityIndicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "179",
+    "label" : {
+      "IRI-based" : "hasSustainabilityIndicator"
+    },
+    "superproperty" : [ "180" ],
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "178"
+  }, {
+    "range" : "183",
+    "domain" : "182",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "181"
+  }, {
+    "range" : "183",
+    "domain" : "186",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "185"
+  }, {
+    "range" : "183",
+    "domain" : "188",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "187"
+  }, {
+    "range" : "30",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "190"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/YearOfPurchase",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "192",
+    "description" : {
+      "undefined" : "The year when a device was purchased."
+    },
+    "label" : {
+      "IRI-based" : "YearOfPurchase",
+      "undefined" : "Year of Purchase"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "191"
+  }, {
+    "range" : "179",
+    "domain" : "201",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "200"
+  }, {
+    "range" : "179",
+    "domain" : "203",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "202"
+  }, {
+    "range" : "179",
+    "domain" : "205",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "204"
+  }, {
+    "range" : "179",
+    "domain" : "207",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "206"
+  }, {
+    "range" : "183",
+    "domain" : "209",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "208"
+  }, {
+    "range" : "183",
+    "domain" : "211",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "210"
+  }, {
+    "range" : "37",
+    "domain" : "213",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "212"
+  }, {
+    "range" : "179",
+    "domain" : "216",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "215"
+  }, {
+    "range" : "179",
+    "domain" : "218",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "217"
+  }, {
+    "range" : "179",
+    "domain" : "220",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "219"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/WarrantyDuration",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "222",
+    "description" : {
+      "undefined" : "The duration of warranty."
+    },
+    "label" : {
+      "IRI-based" : "WarrantyDuration"
+    },
+    "domain" : "172",
+    "attributes" : [ "datatype" ],
+    "id" : "221"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasSecuritySoftware",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "116",
+    "label" : {
+      "IRI-based" : "hasSecuritySoftware"
+    },
+    "superproperty" : [ "224" ],
+    "domain" : "30",
+    "attributes" : [ "object" ],
+    "id" : "223"
+  }, {
+    "range" : "179",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "225"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/associatedCity",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "228",
+    "label" : {
+      "IRI-based" : "associatedCity"
+    },
+    "superproperty" : [ "229" ],
+    "domain" : "227",
+    "attributes" : [ "functional", "object" ],
+    "id" : "226"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/TemperaturePerHour",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "231",
+    "label" : {
+      "IRI-based" : "TemperaturePerHour",
+      "undefined" : "Temperature per Hour"
+    },
+    "domain" : "97",
+    "attributes" : [ "datatype" ],
+    "id" : "230"
+  }, {
+    "range" : "37",
+    "domain" : "133",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "233"
+  }, {
+    "range" : "37",
+    "domain" : "235",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "234"
+  }, {
+    "range" : "37",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "236"
+  }, {
+    "range" : "37",
+    "domain" : "108",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "237"
+  }, {
+    "range" : "37",
+    "domain" : "239",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "238"
+  }, {
+    "range" : "37",
+    "domain" : "241",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "240"
+  }, {
+    "range" : "37",
+    "domain" : "243",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "242"
+  }, {
+    "range" : "37",
+    "domain" : "245",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "244"
+  }, {
+    "range" : "37",
+    "domain" : "247",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "246"
+  }, {
+    "range" : "37",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "248"
+  }, {
+    "range" : "37",
+    "domain" : "250",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "249"
+  }, {
+    "range" : "37",
+    "domain" : "164",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "251"
+  }, {
+    "range" : "37",
+    "domain" : "253",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "252"
+  }, {
+    "range" : "37",
+    "domain" : "255",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "254"
+  }, {
+    "range" : "37",
+    "domain" : "257",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "256"
+  }, {
+    "range" : "37",
+    "domain" : "259",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "258"
+  }, {
+    "range" : "37",
+    "domain" : "261",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "260"
+  }, {
+    "range" : "37",
+    "domain" : "263",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "262"
+  }, {
+    "range" : "37",
+    "domain" : "265",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "264"
+  }, {
+    "range" : "37",
+    "domain" : "189",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "266"
+  }, {
+    "range" : "37",
+    "domain" : "268",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "267"
+  }, {
+    "range" : "37",
+    "domain" : "270",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "269"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/BatteryCapacity",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "276",
+    "label" : {
+      "IRI-based" : "BatteryCapacity",
+      "undefined" : "Battery Capacity"
+    },
+    "domain" : "253",
+    "attributes" : [ "datatype" ],
+    "id" : "275"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isStatusFor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "199",
+    "label" : {
+      "IRI-based" : "isStatusFor"
+    },
+    "domain" : "183",
+    "attributes" : [ "functional", "object" ],
+    "id" : "277"
+  }, {
+    "range" : "19",
+    "domain" : "197",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "283"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isReasonfor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "199",
+    "label" : {
+      "IRI-based" : "isReasonfor"
+    },
+    "domain" : "175",
+    "attributes" : [ "functional", "object" ],
+    "id" : "284"
+  }, {
+    "range" : "19",
+    "domain" : "286",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "285"
+  }, {
+    "range" : "19",
+    "domain" : "288",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "287"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasSensor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasSensor"
+    },
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "293"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/RAMSize",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "305",
+    "description" : {
+      "undefined" : "The total RAM size of a device or a storage device."
+    },
+    "label" : {
+      "IRI-based" : "RAMSize",
+      "undefined" : "RAM Size"
+    },
+    "domain" : "304",
+    "attributes" : [ "datatype" ],
+    "id" : "303"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasInput",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "310",
+    "label" : {
+      "IRI-based" : "hasInput"
+    },
+    "domain" : "106",
+    "attributes" : [ "functional", "object" ],
+    "id" : "309"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasProperty"
+    },
+    "domain" : "2",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "311"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/MaterialWeight",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "315",
+    "description" : {
+      "undefined" : "The weight of a material."
+    },
+    "label" : {
+      "IRI-based" : "MaterialWeight",
+      "undefined" : "Material Weight"
+    },
+    "domain" : "314",
+    "attributes" : [ "datatype" ],
+    "id" : "313"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DigitalProductPassportID",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "322",
+    "description" : {
+      "undefined" : "A unique identifier of a digital product passport."
+    },
+    "label" : {
+      "IRI-based" : "DigitalProductPassportID",
+      "undefined" : "Digital Product Passport ID"
+    },
+    "domain" : "312",
+    "attributes" : [ "datatype" ],
+    "id" : "321"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/SparePartNumber",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "326",
+    "description" : {
+      "undefined" : "Unique number of a spare part usually used for the repair, refurbishment, remanufacturing of an ICT device."
+    },
+    "label" : {
+      "IRI-based" : "SparePartNumber",
+      "undefined" : "Spare Part Number"
+    },
+    "domain" : "37",
+    "attributes" : [ "datatype" ],
+    "id" : "325"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ICTDeviceSerialNumber",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "308",
+    "description" : {
+      "undefined" : "An identification number showing the position of a printed or manufactured item in a series."
+    },
+    "label" : {
+      "IRI-based" : "ICTDeviceSerialNumber",
+      "undefined" : "ICT Device Serial Number"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "327"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasMaterialComposition",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "119",
+    "label" : {
+      "IRI-based" : "hasMaterialComposition"
+    },
+    "domain" : "332",
+    "attributes" : [ "functional", "object" ],
+    "id" : "338"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ClockRate",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "328",
+    "description" : {
+      "undefined" : "Clock rate of a graphics card in GHz."
+    },
+    "label" : {
+      "IRI-based" : "ClockRate",
+      "undefined" : "Clock Rate"
+    },
+    "domain" : "270",
+    "attributes" : [ "datatype" ],
+    "id" : "339"
+  }, {
+    "range" : "54",
+    "domain" : "278",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "354"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasMemory",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasMemory"
+    },
+    "domain" : "348",
+    "attributes" : [ "functional", "object" ],
+    "id" : "355"
+  }, {
+    "range" : "54",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "356"
+  }, {
+    "range" : "16",
+    "domain" : "141",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "358"
+  }, {
+    "range" : "54",
+    "domain" : "360",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "359"
+  }, {
+    "range" : "205",
+    "domain" : "320",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "361"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/EnergyConsumption",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "317",
+    "description" : {
+      "undefined" : "Energy consumption refers to the energy usedby a device in operation, which may be an average of different modes of operation (measured in kW)."
+    },
+    "label" : {
+      "IRI-based" : "EnergyConsumption",
+      "en" : "Energy Consumption"
+    },
+    "domain" : "344",
+    "attributes" : [ "datatype" ],
+    "id" : "218"
+  }, {
+    "range" : "205",
+    "domain" : "364",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "363"
+  }, {
+    "range" : "23",
+    "domain" : "102",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "365"
+  }, {
+    "range" : "23",
+    "domain" : "100",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "366"
+  }, {
+    "range" : "23",
+    "domain" : "99",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "367"
+  }, {
+    "range" : "23",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "368"
+  }, {
+    "range" : "23",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "369"
+  }, {
+    "range" : "23",
+    "domain" : "96",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "370"
+  }, {
+    "range" : "23",
+    "domain" : "95",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "371"
+  }, {
+    "range" : "23",
+    "domain" : "98",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "372"
+  }, {
+    "range" : "23",
+    "domain" : "97",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "373"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/City",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "329",
+    "description" : {
+      "undefined" : "A city is a human settlement of notable size."
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "undefined" : "City"
+    },
+    "domain" : "375",
+    "attributes" : [ "datatype" ],
+    "id" : "374"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/associatedCountry",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "150",
+    "label" : {
+      "IRI-based" : "associatedCountry"
+    },
+    "superproperty" : [ "229" ],
+    "domain" : "331",
+    "attributes" : [ "functional", "object" ],
+    "id" : "376"
+  }, {
+    "range" : "271",
+    "domain" : "173",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "377"
+  }, {
+    "range" : "271",
+    "domain" : "179",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "378"
+  }, {
+    "range" : "23",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "379"
+  }, {
+    "range" : "29",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "380"
+  }, {
+    "range" : "271",
+    "domain" : "280",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "382"
+  }, {
+    "range" : "29",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "383"
+  }, {
+    "range" : "280",
+    "domain" : "385",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "384"
+  }, {
+    "range" : "280",
+    "domain" : "387",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "386"
+  }, {
+    "range" : "280",
+    "domain" : "279",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "388"
+  }, {
+    "range" : "280",
+    "domain" : "390",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "389"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasIndicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "271",
+    "label" : {
+      "IRI-based" : "hasIndicator"
+    },
+    "domain" : "30",
+    "subproperty" : [ "391", "392", "178" ],
+    "attributes" : [ "functional", "object" ],
+    "id" : "180"
+  }, {
+    "range" : "116",
+    "domain" : "394",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "393"
+  }, {
+    "range" : "280",
+    "domain" : "292",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "395"
+  }, {
+    "range" : "116",
+    "domain" : "169",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "396"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasOutput",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "398",
+    "label" : {
+      "IRI-based" : "hasOutput"
+    },
+    "domain" : "106",
+    "attributes" : [ "functional", "object" ],
+    "id" : "397"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/NumberOfPorts",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "301",
+    "label" : {
+      "IRI-based" : "NumberOfPorts",
+      "undefined" : "Number of Ports"
+    },
+    "domain" : "247",
+    "attributes" : [ "datatype" ],
+    "id" : "399"
+  }, {
+    "range" : "193",
+    "domain" : "195",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "400"
+  }, {
+    "range" : "193",
+    "domain" : "194",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "401"
+  }, {
+    "range" : "108",
+    "domain" : "403",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "402"
+  }, {
+    "range" : "108",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "404"
+  }, {
+    "range" : "40",
+    "domain" : "177",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "405"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasInformationAbout",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasInformationAbout"
+    },
+    "domain" : "312",
+    "attributes" : [ "functional", "object" ],
+    "id" : "406"
+  }, {
+    "range" : "40",
+    "domain" : "176",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "407"
+  }, {
+    "range" : "40",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "408"
+  }, {
+    "range" : "40",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "409"
+  }, {
+    "range" : "18",
+    "domain" : "362",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "410"
+  }, {
+    "range" : "18",
+    "domain" : "412",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "411"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "414",
+    "label" : {
+      "IRI-based" : "madeObservation"
+    },
+    "domain" : "2",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "413"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/HardwareComponentSerialNumber",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "316",
+    "description" : {
+      "undefined" : "An identification number showing the position of a printed or manufactured item in a series."
+    },
+    "label" : {
+      "IRI-based" : "HardwareComponentSerialNumber",
+      "undefined" : "Hardware Component Serial Number"
+    },
+    "domain" : "218",
+    "attributes" : [ "datatype" ],
+    "id" : "415"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isComponentOf",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "isComponentOf"
+    },
+    "domain" : "37",
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "416"
+  }, {
+    "range" : "21",
+    "domain" : "143",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "417"
+  }, {
+    "range" : "34",
+    "domain" : "419",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "418"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CPUSpeed",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "421",
+    "description" : {
+      "undefined" : "CPU speed is determined by how many calculations the processor can perform per cycle."
+    },
+    "label" : {
+      "IRI-based" : "CPUSpeed",
+      "undefined" : "CPU Speed"
+    },
+    "domain" : "385",
+    "attributes" : [ "datatype" ],
+    "id" : "420"
+  }, {
+    "range" : "16",
+    "domain" : "142",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "422"
+  }, {
+    "range" : "21",
+    "domain" : "424",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "423"
+  }, {
+    "range" : "21",
+    "domain" : "334",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "425"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasCertification",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "152",
+    "label" : {
+      "IRI-based" : "hasCertification"
+    },
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "426"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "419",
+    "label" : {
+      "IRI-based" : "observedProperty"
+    },
+    "domain" : "414",
+    "attributes" : [ "object", "external" ],
+    "id" : "427"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CPULoad",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "352",
+    "description" : {
+      "undefined" : "CPU load is the number of processes that are using, or want to use, CPU time, or queued up processes ready to use CPU."
+    },
+    "label" : {
+      "IRI-based" : "CPULoad",
+      "undefined" : "CPU Load"
+    },
+    "domain" : "314",
+    "attributes" : [ "datatype" ],
+    "id" : "428"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasMeasurementUnit",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit"
+    },
+    "domain" : "341",
+    "attributes" : [ "functional", "object" ],
+    "id" : "429"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DateTime",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "318",
+    "label" : {
+      "IRI-based" : "DateTime",
+      "undefined" : "Date Time"
+    },
+    "domain" : "26",
+    "attributes" : [ "datatype" ],
+    "id" : "430"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isManufacturedBy",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isManufacturedBy"
+    },
+    "domain" : "37",
+    "attributes" : [ "functional", "object" ],
+    "id" : "431"
+  }, {
+    "range" : "57",
+    "domain" : "184",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "432"
+  }, {
+    "range" : "280",
+    "domain" : "434",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "433"
+  }, {
+    "range" : "57",
+    "domain" : "232",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "435"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ScreenSize",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "291",
+    "description" : {
+      "undefined" : "The size of an ICT device's screen."
+    },
+    "label" : {
+      "IRI-based" : "ScreenSize",
+      "undefined" : "Screen Size"
+    },
+    "domain" : "241",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "436"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/DisplayResolution",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "323",
+    "description" : {
+      "undefined" : "Display resolution or screen resolution expresses how many pixels are present in a display or entire screen."
+    },
+    "label" : {
+      "IRI-based" : "DisplayResolution",
+      "undefined" : "Display Resolution"
+    },
+    "domain" : "241",
+    "attributes" : [ "datatype" ],
+    "id" : "437"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isSelectedCircularStrategyFor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "isSelectedCircularStrategyFor"
+    },
+    "domain" : "199",
+    "attributes" : [ "object" ],
+    "id" : "438"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasRole",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasRole"
+    },
+    "domain" : "54",
+    "attributes" : [ "functional", "object" ],
+    "id" : "439"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isResultOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "414",
+    "label" : {
+      "IRI-based" : "isResultOf"
+    },
+    "domain" : "330",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "440"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ROMSize",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "300",
+    "description" : {
+      "undefined" : "ROM is non-volatile memory that permanently stores instructions for your computer."
+    },
+    "label" : {
+      "IRI-based" : "ROMSize",
+      "undefined" : "ROM Size"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "441"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasVMHost",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "hasVMHost"
+    },
+    "domain" : "146",
+    "attributes" : [ "functional", "object" ],
+    "id" : "442"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasExpectedLifetime",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "282",
+    "label" : {
+      "IRI-based" : "hasExpectedLifetime"
+    },
+    "domain" : "340",
+    "attributes" : [ "object" ],
+    "id" : "443"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/usedCircularStrategy",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "343",
+    "label" : {
+      "IRI-based" : "usedCircularStrategy"
+    },
+    "domain" : "199",
+    "attributes" : [ "functional", "object" ],
+    "id" : "444"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/Reason",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "299",
+    "description" : {
+      "undefined" : "The reason/precondition for a circular strategy."
+    },
+    "label" : {
+      "IRI-based" : "Reason",
+      "undefined" : "Reason"
+    },
+    "domain" : "175",
+    "attributes" : [ "datatype" ],
+    "id" : "175"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/associatedLocation",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "214",
+    "label" : {
+      "IRI-based" : "associatedLocation"
+    },
+    "domain" : "199",
+    "subproperty" : [ "376", "226" ],
+    "attributes" : [ "functional", "object" ],
+    "id" : "229"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/phenomenonTime",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "281",
+    "label" : {
+      "IRI-based" : "phenomenonTime"
+    },
+    "domain" : "414",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "445"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasSoftware",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "112",
+    "label" : {
+      "IRI-based" : "hasSoftware"
+    },
+    "domain" : "30",
+    "subproperty" : [ "223", "446" ],
+    "attributes" : [ "functional", "object" ],
+    "id" : "224"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasCurrentLifetime",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "282",
+    "label" : {
+      "IRI-based" : "hasCurrentLifetime"
+    },
+    "domain" : "345",
+    "attributes" : [ "object" ],
+    "id" : "450"
+  }, {
+    "range" : "118",
+    "domain" : "447",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "451"
+  }, {
+    "range" : "214",
+    "domain" : "150",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "452"
+  }, {
+    "range" : "214",
+    "domain" : "375",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "453"
+  }, {
+    "range" : "342",
+    "domain" : "398",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "454"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
+    "inverse" : "35",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isObservedBy"
+    },
+    "domain" : "419",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "455"
+  }, {
+    "range" : "342",
+    "domain" : "310",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "456"
+  }, {
+    "range" : "14",
+    "domain" : "347",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "457"
+  }, {
+    "range" : "14",
+    "domain" : "349",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "458"
+  }, {
+    "range" : "14",
+    "domain" : "350",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "459"
+  }, {
+    "range" : "14",
+    "domain" : "104",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "460"
+  }, {
+    "range" : "14",
+    "domain" : "351",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "461"
+  }, {
+    "range" : "28",
+    "domain" : "335",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "462"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/ICTDeviceWeight",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "307",
+    "description" : {
+      "undefined" : "Weight of an ICT device."
+    },
+    "label" : {
+      "IRI-based" : "ICTDeviceWeight",
+      "undefined" : "ICT Device Weight"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "463"
+  }, {
+    "range" : "220",
+    "domain" : "294",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "464"
+  }, {
+    "range" : "220",
+    "domain" : "295",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "465"
+  }, {
+    "range" : "220",
+    "domain" : "296",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "466"
+  }, {
+    "range" : "197",
+    "domain" : "196",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "467"
+  }, {
+    "range" : "197",
+    "domain" : "319",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "468"
+  }, {
+    "range" : "28",
+    "domain" : "336",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "469"
+  }, {
+    "range" : "28",
+    "domain" : "337",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "470"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "440",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "330",
+    "label" : {
+      "IRI-based" : "hasResult"
+    },
+    "domain" : "414",
+    "attributes" : [ "object", "external" ],
+    "id" : "471"
+  }, {
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "472"
+  }, {
+    "range" : "28",
+    "domain" : "297",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "473"
+  }, {
+    "range" : "106",
+    "domain" : "105",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "474"
+  }, {
+    "range" : "106",
+    "domain" : "290",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "475"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observes",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "419",
+    "label" : {
+      "IRI-based" : "observes"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasBrand",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasBrand"
+    },
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "476"
+  }, {
+    "range" : "199",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "477"
+  }, {
+    "range" : "199",
+    "domain" : "448",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "478"
+  }, {
+    "range" : "199",
+    "domain" : "449",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "479"
+  }, {
+    "range" : "199",
+    "domain" : "198",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "480"
+  }, {
+    "range" : "199",
+    "domain" : "298",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "481"
+  }, {
+    "range" : "106",
+    "domain" : "289",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "482"
+  }, {
+    "range" : "106",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "483"
+  }, {
+    "range" : "106",
+    "domain" : "193",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "484"
+  }, {
+    "range" : "281",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "485"
+  }, {
+    "range" : "199",
+    "domain" : "353",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "486"
+  }, {
+    "range" : "199",
+    "domain" : "357",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "487"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CameraPixels",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "489",
+    "label" : {
+      "IRI-based" : "CameraPixels",
+      "undefined" : "Camera Pixels"
+    },
+    "domain" : "257",
+    "attributes" : [ "datatype" ],
+    "id" : "488"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasSource",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasSource"
+    },
+    "domain" : "342",
+    "attributes" : [ "object" ],
+    "id" : "490"
+  }, {
+    "range" : "30",
+    "domain" : "146",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "491"
+  }, {
+    "range" : "30",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "492"
+  }, {
+    "range" : "173",
+    "domain" : "272",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "493"
+  }, {
+    "range" : "173",
+    "domain" : "273",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "494"
+  }, {
+    "range" : "173",
+    "domain" : "172",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "495"
+  }, {
+    "range" : "173",
+    "domain" : "274",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "496"
+  }, {
+    "range" : "281",
+    "domain" : "282",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "497"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasFunctionalIndicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "280",
+    "label" : {
+      "IRI-based" : "hasFunctionalIndicator"
+    },
+    "superproperty" : [ "180" ],
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "392"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasStatus",
+    "inverse" : "277",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "183",
+    "label" : {
+      "IRI-based" : "hasStatus"
+    },
+    "domain" : "199",
+    "attributes" : [ "functional", "object" ],
+    "id" : "498"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/CircularActivityCost",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "324",
+    "description" : {
+      "undefined" : "The monetary cost of performing repair, recycling, refurbishment, remanufacturing etc. of an ICT and/or its hardware (in euros)."
+    },
+    "label" : {
+      "IRI-based" : "CircularActivityCost",
+      "undefined" : "Circular Activity Cost"
+    },
+    "domain" : "199",
+    "attributes" : [ "datatype" ],
+    "id" : "499"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isResponsibleFor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "346",
+    "label" : {
+      "IRI-based" : "isResponsibleFor"
+    },
+    "domain" : "54",
+    "attributes" : [ "functional", "object" ],
+    "id" : "500"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasWarranty",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "172",
+    "label" : {
+      "IRI-based" : "hasWarranty"
+    },
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "501"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/MaxCoolingRate",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "302",
+    "description" : {
+      "undefined" : "The speed of an ICT's cooling system."
+    },
+    "label" : {
+      "IRI-based" : "MaxCoolingRate",
+      "undefined" : "Max Cooling Rate"
+    },
+    "domain" : "40",
+    "attributes" : [ "datatype" ],
+    "id" : "502"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasDataSource",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "342",
+    "label" : {
+      "IRI-based" : "hasDataSource"
+    },
+    "domain" : "106",
+    "attributes" : [ "object" ],
+    "id" : "503"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/relatedTo",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "relatedTo"
+    },
+    "domain" : "174",
+    "attributes" : [ "functional", "object" ],
+    "id" : "504"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isRecommendedCircularStrategyFor",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "333",
+    "label" : {
+      "IRI-based" : "isRecommendedCircularStrategyFor"
+    },
+    "domain" : "199",
+    "attributes" : [ "functional", "object" ],
+    "id" : "505"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasEconomicalIndicator",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "173",
+    "label" : {
+      "IRI-based" : "hasEconomicalIndicator"
+    },
+    "superproperty" : [ "180" ],
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "391"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "inverse" : "413",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "madeBySensor"
+    },
+    "domain" : "414",
+    "attributes" : [ "allValues", "functional", "object", "external" ],
+    "id" : "506"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observes",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "419",
+    "label" : {
+      "IRI-based" : "observes"
+    },
+    "superproperty" : [ "33" ],
+    "domain" : "2",
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "507"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasCriticalityLevel",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "220",
+    "label" : {
+      "IRI-based" : "hasCriticalityLevel"
+    },
+    "domain" : "119",
+    "attributes" : [ "functional", "object" ],
+    "id" : "508"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeObservation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "414",
+    "label" : {
+      "IRI-based" : "madeObservation"
+    },
+    "domain" : "2",
+    "attributes" : [ "allValues", "functional", "object", "external" ],
+    "id" : "509"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/AssemblyNumber",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "510",
+    "description" : {
+      "undefined" : "A unique number used to identify a device and/or its hardware components."
+    },
+    "label" : {
+      "IRI-based" : "AssemblyNumber",
+      "undefined" : "Assembly Number"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "511"
+  }, {
+    "range" : "28",
+    "domain" : "119",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "512"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "419",
+    "label" : {
+      "IRI-based" : "observedProperty"
+    },
+    "domain" : "414",
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "513"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasOperatingSystem",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasOperatingSystem"
+    },
+    "superproperty" : [ "224" ],
+    "domain" : "30",
+    "attributes" : [ "object" ],
+    "id" : "446"
+  }, {
+    "iri" : "https://www.w3.org/TR/owl-time/#time:hasEnd",
+    "baseIri" : "https://www.w3.org/TR/owl-time/",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "time:hasEnd",
+      "undefined" : "hasEnd"
+    },
+    "domain" : "381",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "514"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/NumberOfRAM",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "306",
+    "description" : {
+      "undefined" : "Data servers can have several RAM slots."
+    },
+    "label" : {
+      "IRI-based" : "NumberOfRAM",
+      "undefined" : "Number of RAM"
+    },
+    "domain" : "30",
+    "attributes" : [ "datatype" ],
+    "id" : "515"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "inverse" : "413",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "madeBySensor"
+    },
+    "domain" : "414",
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "516"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/isOfPeripheralType",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "isOfPeripheralType"
+    },
+    "domain" : "37",
+    "attributes" : [ "functional", "object" ],
+    "id" : "517"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasAverageLifetime",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "282",
+    "label" : {
+      "IRI-based" : "hasAverageLifetime"
+    },
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "518"
+  }, {
+    "iri" : "http://www.semanticweb.org/RePlanIT/hasComponent",
+    "inverse" : "416",
+    "baseIri" : "http://www.semanticweb.org/RePlanIT",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "hasComponent"
+    },
+    "domain" : "30",
+    "attributes" : [ "functional", "object" ],
+    "id" : "519"
+  } ]
+}
